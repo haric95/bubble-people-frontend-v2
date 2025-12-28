@@ -1,0 +1,10 @@
+@theme {
+    --color-black: #0f0e15;
+    --color-bg-blue: #191c23;
+    --color-white: #eeeeee;
+    --color-highlight: #1cafc4;
+    --color-highlight-2: #98e659;
+
+    --font-title: "Second Space", sans-serif;
+    --font-main: "Brass Mono", sans-serif;
+}

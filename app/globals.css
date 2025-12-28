@@ -1,26 +1,140 @@
 @import "tailwindcss";
+@import "./tailwindConfig.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-display: swap;
+    font-family: "Robocode";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/robocode-font/Robocode.ttf);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+    font-display: swap;
+    font-family: "Second Space";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/second-space-font/SecondSpace.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Brass Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/brass-mono-font/BrassMonoRegular.ttf);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family:
+        monospace,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        Fira Sans,
+        Droid Sans,
+        Helvetica Neue,
+        sans-serif;
+    color: #eeeeee;
+    filter: blur(0.018rem);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+::selection {
+    background: #bceb21; /* WebKit/Blink Browsers */
+    color: black;
+}
+::-moz-selection {
+    background: #bceb21; /* Gecko Browsers */
+    color: black;
+}
+
+.text-glow-heading {
+    text-shadow: 0 0 20px #49c2f1;
+}
+
+.text-glow-button {
+    color: #def6ff;
+    text-shadow: 0 0 0px #def6ff;
+    transition: text-shadow 0.5s ease;
+}
+
+.text-glow-button:hover {
+    text-shadow: 0 0 8px #def6ff;
+}
+
+.noise-bg {
+    background:
+        linear-gradient(to right, transparent, transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+    opacity: 0.5;
+}
+
+.about-page .swiper-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.about-page .swiper-pagination-bullet {
+    background-color: #bceb21;
+    mix-blend-mode: difference;
+    opacity: 0.4;
+}
+.about-page .swiper-pagination-bullet-active {
+    background-color: #aad422;
+    mix-blend-mode: difference;
+    opacity: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hover-rotate {
+    animation: rotate 50000ms linear infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+.hover-rotate:hover {
+    animation-play-state: running;
 }

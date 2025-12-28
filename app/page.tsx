@@ -1,65 +1,154 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div>
+      <div className="p-3 md:p-8 flex flex-col items-center">
+        <h1
+          className="font-title mb-4 text-highlight"
+          style={{
+            backgroundClip: "text",
+            backgroundImage: "url(/images/mask-1.jpg)",
+            color: "#1CAFC488",
+            filter: "brightness(1.5) contrast(0.8) brightness(1.3)",
+            backgroundSize: "200% 400%",
+          }}
+        >
+          Upcoming
+        </h1>
+        <div className="flex items-center mb-4">
+          <p>Live @ Taco Stand In Gabby's Yard - 15th Jan 2026</p>
+          <Link href="" className="g">
+            <div className="mx-8 font-title border-2 border-white rounded-lg px-2 py-1 text-highlight-2">
+              <p>INFO</p>
+            </div>
+          </Link>
+        </div>
+        <div className="flex items-center mb-4">
+          <p>Live @ Madison Square Gardens - 16th Jan 2026</p>
+          <Link href="" className="g">
+            <div className="mx-8 font-title border-2 border-white rounded-lg px-2 py-1 text-highlight-2">
+              <p>INFO</p>
+            </div>
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <p>
+            Live @ GATE Presents: Bubble People 12h Live Set - 17th Jan 2026
           </p>
+          <Link href="" className="g">
+            <div className="mx-8 font-title border-2 border-white rounded-lg px-2 py-1 text-highlight-2">
+              <p>INFO</p>
+            </div>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+      <div className="w-full mt-8 flex justify-center">
+        <div className="w-full md:w-1/2 aspect-[1.77]">
+          {/*<SlidingGallery
+              images={[
+                {
+                  attributes: {
+                    url: "https://placehold.co/600x400/EEE/31343C",
+                  },
+                },
+                {
+                  attributes: {
+                    url: "https://placehold.co/600x400/EEE/ff00f0",
+                  },
+                },
+                {
+                  attributes: {
+                    url: "https://placehold.co/600x400/EEE/0f00f0",
+                  },
+                },
+                {
+                  attributes: {
+                    url: "https://placehold.co/600x400/EEE/0004f0",
+                  },
+                },
+              ]}
+            />*/}
         </div>
-      </main>
+      </div>
+      <div className="w-full py-16 flex flex-col items-center">
+        <h1 className="font-title mb-4">Music</h1>
+        <div className="w-full px-16 mb-8">
+          <h2 className="font-title">LP</h2>
+          <div className="flex flex-wrap">
+            <div className="w-1/3 p-4 ">
+              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
+              <p>Color Dome</p>
+              <p>2022</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
+              <p>Consequence Unknown</p>
+              <p>2023</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
+              <p>Old Habits</p>
+              <p>2028</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
+              <p>Escape Plane</p>
+              <p>1996</p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full px-16">
+          <h2 className="font-title">EP / Single</h2>
+          <div className="flex flex-wrap">
+            <div className="w-1/3 p-4 ">
+              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
+              <p>Color Dome</p>
+              <p>2022</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
+              <p>Consequence Unknown</p>
+              <p>2023</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
+              <p>Old Habits</p>
+              <p>2028</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
+              <p>Escape Plane</p>
+              <p>1996</p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full px-16">
+          <h2 className="font-title">AV</h2>
+          <div className="flex flex-wrap">
+            <div className="w-1/3 p-4 ">
+              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
+              <p>Color Dome</p>
+              <p>2022</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
+              <p>Consequence Unknown</p>
+              <p>2023</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
+              <p>Old Habits</p>
+              <p>2028</p>
+            </div>
+            <div className="w-1/3 p-4">
+              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
+              <p>Escape Plane</p>
+              <p>1996</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
