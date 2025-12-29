@@ -5,15 +5,15 @@ export const Header = () => {
   return (
     <header className="flex py-4 w-full justify-items-stretch font-title">
       <div className="flex justify-center h-full items-center grow">
-        <Link href="/store" className="hover:scale-105">
+        <Link href="/music" className="cursor-pointer">
           <h1
-            className="tracking-wide text-[32px] hover:scale-105 transition-transform duration-500 cursor-pointer"
+            className="tracking-wide text-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
             style={{
               backgroundClip: "text",
-              backgroundImage: "url(/images/mask-1.jpg)",
+              backgroundImage: "url(/images/mask-2.jpg)",
               color: "#1CAFC488",
               filter: "brightness(2) contrast(0.4) brightness(1.5)",
-              backgroundSize: "400% 400%",
+              backgroundSize: "400% 200%",
             }}
           >
             Music
