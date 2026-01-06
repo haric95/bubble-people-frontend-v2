@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <div className="p-3 md:p-8 flex flex-col items-center">
         <h1
-          className="font-title mb-4 text-highlight"
+          className="font-title mb-4 text-highlight text-[64px]"
           style={{
             backgroundClip: "text",
             backgroundImage: "url(/images/mask-1.jpg)",
@@ -69,84 +69,6 @@ export default function Home() {
                 },
               ]}
             />*/}
-        </div>
-      </div>
-      <div className="w-full py-16 flex flex-col items-center">
-        <h1 className="font-title mb-4">Music</h1>
-        <div className="w-full px-16 mb-8">
-          <h2 className="font-title">LP</h2>
-          <div className="flex flex-wrap">
-            <div className="w-1/3 p-4 ">
-              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
-              <p>Color Dome</p>
-              <p>2022</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
-              <p>Consequence Unknown</p>
-              <p>2023</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
-              <p>Old Habits</p>
-              <p>2028</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
-              <p>Escape Plane</p>
-              <p>1996</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full px-16">
-          <h2 className="font-title">EP / Single</h2>
-          <div className="flex flex-wrap">
-            <div className="w-1/3 p-4 ">
-              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
-              <p>Color Dome</p>
-              <p>2022</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
-              <p>Consequence Unknown</p>
-              <p>2023</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
-              <p>Old Habits</p>
-              <p>2028</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
-              <p>Escape Plane</p>
-              <p>1996</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full px-16">
-          <h2 className="font-title">AV</h2>
-          <div className="flex flex-wrap">
-            <div className="w-1/3 p-4 ">
-              <img src="/images/cover-1.jpg" className="rounded-lg mb-2" />
-              <p>Color Dome</p>
-              <p>2022</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-2.jpg" className="rounded-lg mb-2" />
-              <p>Consequence Unknown</p>
-              <p>2023</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-3.jpg" className="rounded-lg mb-2" />
-              <p>Old Habits</p>
-              <p>2028</p>
-            </div>
-            <div className="w-1/3 p-4">
-              <img src="/images/cover-4.jpg" className="rounded-lg mb-2" />
-              <p>Escape Plane</p>
-              <p>1996</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

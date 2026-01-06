@@ -122,3 +122,29 @@ a {
 .hover-rotate:hover {
     animation-play-state: running;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+::view-transition-old(.content) {
+    animation-name: fade-out;
+}
+
+::view-transition-new(.content) {
+    animation-name: fade-in;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
