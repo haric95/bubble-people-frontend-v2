@@ -1,6 +1,5 @@
-import react from "react";
-import { StrapiImage } from "@/types";
 import Link from "next/link";
+import { AudioPlayer } from "../components/AudioPlayer";
 
 const MUSIC_DUMMY_DATA = {
   LP: [
@@ -86,10 +85,9 @@ const MUSIC_DUMMY_DATA = {
 const Music = () => {
   return (
     <div>
-      {" "}
-      <div className="w-full py-16 flex flex-col items-center">
+      <div className="w-full py-16 md:p-8 p-4 flex flex-col items-center">
         <h1
-          className="font-title mb-4 text-highlight text-[64px]"
+          className="font-title mb-8 text-highlight text-[64px]"
           style={{
             backgroundClip: "text",
             backgroundImage: "url(/images/mask-1.jpg)",
@@ -100,7 +98,20 @@ const Music = () => {
         >
           Music
         </h1>
-        <div className="w-full px-16 mb-8">
+        <div className="w-full md:w-1/2 md:h-32 mb-8 relative">
+          <div
+            className="h-full w-full absolute top-0 opacity-20 rounded-xl pointer-events-none"
+            style={{
+              filter:
+                "brightness(2) contrast(0.7) sepia(60%) hue-rotate(125deg) brightness(1.6)",
+              backgroundImage: "url(/images/mask-1.jpg)",
+              backgroundSize: "200% 900%",
+              backgroundPosition: "200% 10%",
+            }}
+          />
+          <AudioPlayer />
+        </div>
+        <div className="w-full md:px-16 mb-8">
           <h2
             className="font-title mb-4 text-highlight-3 text-[48px]"
             style={{
@@ -118,7 +129,7 @@ const Music = () => {
               <Link
                 key={item.title}
                 href={item.link}
-                className={`w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${index % 3 === 0 ? "pr-[2%]" : index % 3 === 1 ? "px-[1%]" : "pl-[2%]"}`}
+                className={`w-1/2 md:w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${index % 3 === 0 ? "md:pr-[2%]" : index % 3 === 1 ? "md:px-[1%]" : "md:pl-[2%]"} ${index % 2 === 1 ? "pl-[1%]" : "pr-[1%]"}`}
                 target={"_blank"}
               >
                 <img
