@@ -1,0 +1,411 @@
+{
+  "data": [
+    {
+      "id": 9,
+      "attributes": {
+        "Title": "Duplicate",
+        "Artist": "Bubble People",
+        "Album": "Duplicate",
+        "HostLink": "https://soundcloud.com/bubblepeopleofficial/bubble-people-duplicate-wmv2",
+        "BandcampLink": "https://bubblepeople.bandcamp.com/track/duplicate-2",
+        "Index": 1,
+        "createdAt": "2023-09-06T22:05:12.104Z",
+        "updatedAt": "2024-01-29T22:14:44.967Z",
+        "publishedAt": "2023-09-06T22:06:32.146Z",
+        "Cover": {
+          "data": {
+            "id": 36,
+            "attributes": {
+              "name": "duplicate single cover final.jpg",
+              "alternativeText": "duplicate single cover final.jpg",
+              "caption": "duplicate single cover final.jpg",
+              "width": 3000,
+              "height": 3000,
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1694037905/large_duplicate_single_cover_final_6d191a8438.jpg",
+                  "hash": "large_duplicate_single_cover_final_6d191a8438",
+                  "mime": "image/jpeg",
+                  "name": "large_duplicate single cover final.jpg",
+                  "path": null,
+                  "size": 101.93,
+                  "width": 1000,
+                  "height": 1000,
+                  "provider_metadata": {
+                    "public_id": "large_duplicate_single_cover_final_6d191a8438",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1694037905/small_duplicate_single_cover_final_6d191a8438.jpg",
+                  "hash": "small_duplicate_single_cover_final_6d191a8438",
+                  "mime": "image/jpeg",
+                  "name": "small_duplicate single cover final.jpg",
+                  "path": null,
+                  "size": 29.46,
+                  "width": 500,
+                  "height": 500,
+                  "provider_metadata": {
+                    "public_id": "small_duplicate_single_cover_final_6d191a8438",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1694037905/medium_duplicate_single_cover_final_6d191a8438.jpg",
+                  "hash": "medium_duplicate_single_cover_final_6d191a8438",
+                  "mime": "image/jpeg",
+                  "name": "medium_duplicate single cover final.jpg",
+                  "path": null,
+                  "size": 60.75,
+                  "width": 750,
+                  "height": 750,
+                  "provider_metadata": {
+                    "public_id": "medium_duplicate_single_cover_final_6d191a8438",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1694037905/thumbnail_duplicate_single_cover_final_6d191a8438.jpg",
+                  "hash": "thumbnail_duplicate_single_cover_final_6d191a8438",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_duplicate single cover final.jpg",
+                  "path": null,
+                  "size": 4.45,
+                  "width": 156,
+                  "height": 156,
+                  "provider_metadata": {
+                    "public_id": "thumbnail_duplicate_single_cover_final_6d191a8438",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "duplicate_single_cover_final_6d191a8438",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 567.38,
+              "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1694037905/duplicate_single_cover_final_6d191a8438.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "duplicate_single_cover_final_6d191a8438",
+                "resource_type": "image"
+              },
+              "createdAt": "2023-09-06T22:05:06.354Z",
+              "updatedAt": "2023-09-06T22:05:06.354Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "Title": "Whiplash",
+        "Artist": "Bubble People",
+        "Album": "Rotator",
+        "HostLink": "https://soundcloud.com/bubblepeopleofficial/whiplash",
+        "BandcampLink": "https://bubblepeople.bandcamp.com/track/whiplash",
+        "Index": 2,
+        "createdAt": "2023-01-27T13:56:33.303Z",
+        "updatedAt": "2024-01-29T22:14:53.129Z",
+        "publishedAt": "2023-01-27T13:56:44.853Z",
+        "Cover": {
+          "data": {
+            "id": 17,
+            "attributes": {
+              "name": "rotator.jpg",
+              "alternativeText": "rotator.jpg",
+              "caption": "rotator.jpg",
+              "width": 1600,
+              "height": 1600,
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1674827784/large_rotator_da5499d4e5.jpg",
+                  "hash": "large_rotator_da5499d4e5",
+                  "mime": "image/jpeg",
+                  "name": "large_rotator.jpg",
+                  "path": null,
+                  "size": 34.88,
+                  "width": 1000,
+                  "height": 1000,
+                  "provider_metadata": {
+                    "public_id": "large_rotator_da5499d4e5",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1674827784/small_rotator_da5499d4e5.jpg",
+                  "hash": "small_rotator_da5499d4e5",
+                  "mime": "image/jpeg",
+                  "name": "small_rotator.jpg",
+                  "path": null,
+                  "size": 9.42,
+                  "width": 500,
+                  "height": 500,
+                  "provider_metadata": {
+                    "public_id": "small_rotator_da5499d4e5",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1674827784/medium_rotator_da5499d4e5.jpg",
+                  "hash": "medium_rotator_da5499d4e5",
+                  "mime": "image/jpeg",
+                  "name": "medium_rotator.jpg",
+                  "path": null,
+                  "size": 19.18,
+                  "width": 750,
+                  "height": 750,
+                  "provider_metadata": {
+                    "public_id": "medium_rotator_da5499d4e5",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1674827784/thumbnail_rotator_da5499d4e5.jpg",
+                  "hash": "thumbnail_rotator_da5499d4e5",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_rotator.jpg",
+                  "path": null,
+                  "size": 1.75,
+                  "width": 156,
+                  "height": 156,
+                  "provider_metadata": {
+                    "public_id": "thumbnail_rotator_da5499d4e5",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "rotator_da5499d4e5",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 87.45,
+              "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1674827784/rotator_da5499d4e5.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "rotator_da5499d4e5",
+                "resource_type": "image"
+              },
+              "createdAt": "2023-01-27T13:56:25.045Z",
+              "updatedAt": "2023-01-27T13:56:25.045Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 1,
+      "attributes": {
+        "Title": "Steal A Look",
+        "Artist": "Bubble People",
+        "Album": "Old Habits",
+        "HostLink": "https://soundcloud.com/bubblepeopleofficial/steal-a-look",
+        "BandcampLink": "https://bubblepeople.bandcamp.com/album/old-habits",
+        "Index": 3,
+        "createdAt": "2023-01-04T11:40:14.822Z",
+        "updatedAt": "2024-01-29T22:15:01.940Z",
+        "publishedAt": "2023-01-04T11:40:17.648Z",
+        "Cover": {
+          "data": {
+            "id": 7,
+            "attributes": {
+              "name": "old_habits_cover_sunset_2af8bc1193.webp",
+              "alternativeText": "old_habits_cover_sunset_2af8bc1193.webp",
+              "caption": "old_habits_cover_sunset_2af8bc1193.webp",
+              "width": 2448,
+              "height": 2448,
+              "formats": {
+                "large": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834249/large_old_habits_cover_sunset_2af8bc1193_7b018be2b9.webp",
+                  "hash": "large_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                  "mime": "image/webp",
+                  "name": "large_old_habits_cover_sunset_2af8bc1193.webp",
+                  "path": null,
+                  "size": 128.3,
+                  "width": 1000,
+                  "height": 1000,
+                  "provider_metadata": {
+                    "public_id": "large_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834249/small_old_habits_cover_sunset_2af8bc1193_7b018be2b9.webp",
+                  "hash": "small_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                  "mime": "image/webp",
+                  "name": "small_old_habits_cover_sunset_2af8bc1193.webp",
+                  "path": null,
+                  "size": 41.03,
+                  "width": 500,
+                  "height": 500,
+                  "provider_metadata": {
+                    "public_id": "small_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834249/medium_old_habits_cover_sunset_2af8bc1193_7b018be2b9.webp",
+                  "hash": "medium_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                  "mime": "image/webp",
+                  "name": "medium_old_habits_cover_sunset_2af8bc1193.webp",
+                  "path": null,
+                  "size": 80.54,
+                  "width": 750,
+                  "height": 750,
+                  "provider_metadata": {
+                    "public_id": "medium_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834248/thumbnail_old_habits_cover_sunset_2af8bc1193_7b018be2b9.webp",
+                  "hash": "thumbnail_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                  "mime": "image/webp",
+                  "name": "thumbnail_old_habits_cover_sunset_2af8bc1193.webp",
+                  "path": null,
+                  "size": 5.7,
+                  "width": 156,
+                  "height": 156,
+                  "provider_metadata": {
+                    "public_id": "thumbnail_old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 515.8,
+              "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834248/old_habits_cover_sunset_2af8bc1193_7b018be2b9.webp",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "old_habits_cover_sunset_2af8bc1193_7b018be2b9",
+                "resource_type": "image"
+              },
+              "createdAt": "2023-01-04T12:10:49.900Z",
+              "updatedAt": "2023-01-04T12:11:48.634Z"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "Title": "Tendrils (Dream)",
+        "Artist": "Bubble People",
+        "Album": "Infinite Functions",
+        "HostLink": "https://soundcloud.com/bubblepeopleofficial/tendrils-dream",
+        "BandcampLink": "https://bubblepeople.bandcamp.com/album/infinite-functions",
+        "Index": 4,
+        "createdAt": "2023-01-04T11:41:33.109Z",
+        "updatedAt": "2024-01-29T22:15:06.671Z",
+        "publishedAt": "2023-09-06T22:07:11.090Z",
+        "Cover": {
+          "data": {
+            "id": 8,
+            "attributes": {
+              "name": "if_final1_1400_b20ce38a71.webp",
+              "alternativeText": "if_final1_1400_b20ce38a71.webp",
+              "caption": "if_final1_1400_b20ce38a71.webp",
+              "width": 3840,
+              "height": 3840,
+              "formats": {
+                "large": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834253/large_if_final1_1400_b20ce38a71_ec86daa68d.webp",
+                  "hash": "large_if_final1_1400_b20ce38a71_ec86daa68d",
+                  "mime": "image/webp",
+                  "name": "large_if_final1_1400_b20ce38a71.webp",
+                  "path": null,
+                  "size": 26.97,
+                  "width": 1000,
+                  "height": 1000,
+                  "provider_metadata": {
+                    "public_id": "large_if_final1_1400_b20ce38a71_ec86daa68d",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834253/small_if_final1_1400_b20ce38a71_ec86daa68d.webp",
+                  "hash": "small_if_final1_1400_b20ce38a71_ec86daa68d",
+                  "mime": "image/webp",
+                  "name": "small_if_final1_1400_b20ce38a71.webp",
+                  "path": null,
+                  "size": 6.39,
+                  "width": 500,
+                  "height": 500,
+                  "provider_metadata": {
+                    "public_id": "small_if_final1_1400_b20ce38a71_ec86daa68d",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834253/medium_if_final1_1400_b20ce38a71_ec86daa68d.webp",
+                  "hash": "medium_if_final1_1400_b20ce38a71_ec86daa68d",
+                  "mime": "image/webp",
+                  "name": "medium_if_final1_1400_b20ce38a71.webp",
+                  "path": null,
+                  "size": 15.05,
+                  "width": 750,
+                  "height": 750,
+                  "provider_metadata": {
+                    "public_id": "medium_if_final1_1400_b20ce38a71_ec86daa68d",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".webp",
+                  "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834252/thumbnail_if_final1_1400_b20ce38a71_ec86daa68d.webp",
+                  "hash": "thumbnail_if_final1_1400_b20ce38a71_ec86daa68d",
+                  "mime": "image/webp",
+                  "name": "thumbnail_if_final1_1400_b20ce38a71.webp",
+                  "path": null,
+                  "size": 0.64,
+                  "width": 156,
+                  "height": 156,
+                  "provider_metadata": {
+                    "public_id": "thumbnail_if_final1_1400_b20ce38a71_ec86daa68d",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "if_final1_1400_b20ce38a71_ec86daa68d",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "size": 302.03,
+              "url": "https://res.cloudinary.com/dnbhbywck/image/upload/v1672834251/if_final1_1400_b20ce38a71_ec86daa68d.webp",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "if_final1_1400_b20ce38a71_ec86daa68d",
+                "resource_type": "image"
+              },
+              "createdAt": "2023-01-04T12:10:54.117Z",
+              "updatedAt": "2023-01-04T12:10:54.117Z"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 4 }
+  }
+}

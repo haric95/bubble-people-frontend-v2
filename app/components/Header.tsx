@@ -6,7 +6,6 @@ import React from "react";
 
 export const Header = () => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <header className="flex py-4 w-full items-center font-title">
       <div className="flex justify-center h-full items-center grow">

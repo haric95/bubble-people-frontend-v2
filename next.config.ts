@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
     viewTransition: true,
   },
   images: {
-    remotePatterns: [new URL("https://placehold.co/**")],
+    remotePatterns: [
+      new URL("https://placehold.co/**"),
+      new URL("https://res.cloudinary.com/**"),
+    ],
   },
 };
 

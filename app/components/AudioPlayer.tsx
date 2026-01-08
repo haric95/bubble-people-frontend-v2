@@ -1,4 +1,5 @@
 "use client";
+import { MediaAudioItem, StrapiImage } from "@/types";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import {
@@ -9,164 +10,20 @@ import {
 } from "react-icons/io";
 import ReactPlayer from "react-player";
 
-type MediaVideoItem = {
-  id: number;
-  attributes: {
-    title: string;
-    link: string;
-    index: number;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-  };
-};
+// type MediaVideoItem = {
+//   id: number;
+//   attributes: {
+//     title: string;
+//     link: string;
+//     index: number;
+//     createdAt: string;
+//     updatedAt: string;
+//     publishedAt: string;
+//   };
+// };
+type AudioPlayerProps = { audioItems: MediaAudioItem[] };
 
-type MediaAudioItem = {
-  id: number;
-  attributes: {
-    Title: string;
-    Artist: string;
-    Album: string;
-    HostLink: string;
-    BandcampLink: string;
-    Index: number;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-  };
-};
-
-const videoItems: MediaVideoItem[] = [
-  {
-    id: 6,
-    attributes: {
-      title: "Infinite Functions",
-      link: "https://www.youtube.com/watch?v=Hs9F7cvk0kU",
-      index: 2,
-      createdAt: "2023-01-04T11:37:25.389Z",
-      updatedAt: "2024-01-30T05:29:09.066Z",
-      publishedAt: "2023-01-04T11:37:26.425Z",
-    },
-  },
-  {
-    id: 4,
-    attributes: {
-      title: "Dry Land Swimming",
-      link: "https://www.youtube.com/watch?v=1hzPL6r75mg",
-      index: 5,
-      createdAt: "2023-01-04T11:35:16.863Z",
-      updatedAt: "2024-01-30T05:31:29.018Z",
-      publishedAt: "2023-01-04T11:35:24.240Z",
-    },
-  },
-  {
-    id: 3,
-    attributes: {
-      title: "The Eternal Optimist",
-      link: "https://youtu.be/CFE8724yL7U",
-      index: 6,
-      createdAt: "2023-01-04T11:34:43.960Z",
-      updatedAt: "2024-01-30T05:33:07.902Z",
-      publishedAt: "2023-01-04T11:35:21.688Z",
-    },
-  },
-  {
-    id: 5,
-    attributes: {
-      title: "Escape Plane",
-      link: "https://www.youtube.com/watch?v=xJLdaPm8jco",
-      index: 3,
-      createdAt: "2023-01-04T11:37:01.278Z",
-      updatedAt: "2024-01-30T05:42:58.644Z",
-      publishedAt: "2023-01-04T11:37:02.326Z",
-    },
-  },
-  {
-    id: 2,
-    attributes: {
-      title: "Rotator",
-      link: "https://www.youtube.com/watch?v=WmvDbUARYRc",
-      index: 1,
-      createdAt: "2023-01-04T11:34:18.613Z",
-      updatedAt: "2024-01-30T05:47:58.750Z",
-      publishedAt: "2023-01-04T11:34:19.542Z",
-    },
-  },
-  {
-    id: 1,
-    attributes: {
-      title: "Cracking Wise",
-      link: "https://www.youtube.com/watch?v=08FblpL1ptQ",
-      index: 4,
-      createdAt: "2023-01-04T11:33:43.910Z",
-      updatedAt: "2024-01-30T21:21:40.427Z",
-      publishedAt: "2023-01-04T11:33:46.778Z",
-    },
-  },
-];
-
-const audioItems: MediaAudioItem[] = [
-  {
-    id: 9,
-    attributes: {
-      Title: "Duplicate",
-      Artist: "Bubble People",
-      Album: "Duplicate",
-      HostLink:
-        "https://soundcloud.com/bubblepeopleofficial/bubble-people-duplicate-wmv2",
-      BandcampLink: "https://bubblepeople.bandcamp.com/track/duplicate-2",
-      Index: 1,
-      createdAt: "2023-09-06T22:05:12.104Z",
-      updatedAt: "2024-01-29T22:14:44.967Z",
-      publishedAt: "2023-09-06T22:06:32.146Z",
-    },
-  },
-  {
-    id: 8,
-    attributes: {
-      Title: "Whiplash",
-      Artist: "Bubble People",
-      Album: "Rotator",
-      HostLink: "https://soundcloud.com/bubblepeopleofficial/whiplash",
-      BandcampLink: "https://bubblepeople.bandcamp.com/track/whiplash",
-      Index: 2,
-      createdAt: "2023-01-27T13:56:33.303Z",
-      updatedAt: "2024-01-29T22:14:53.129Z",
-      publishedAt: "2023-01-27T13:56:44.853Z",
-    },
-  },
-  {
-    id: 1,
-    attributes: {
-      Title: "Steal A Look",
-      Artist: "Bubble People",
-      Album: "Old Habits",
-      HostLink: "https://soundcloud.com/bubblepeopleofficial/steal-a-look",
-      BandcampLink: "https://bubblepeople.bandcamp.com/album/old-habits",
-      Index: 3,
-      createdAt: "2023-01-04T11:40:14.822Z",
-      updatedAt: "2024-01-29T22:15:01.940Z",
-      publishedAt: "2023-01-04T11:40:17.648Z",
-    },
-  },
-  {
-    id: 2,
-    attributes: {
-      Title: "Tendrils (Dream)",
-      Artist: "Bubble People",
-      Album: "Infinite Functions",
-      HostLink: "https://soundcloud.com/bubblepeopleofficial/tendrils-dream",
-      BandcampLink:
-        "https://bubblepeople.bandcamp.com/album/infinite-functions",
-      Index: 4,
-      createdAt: "2023-01-04T11:41:33.109Z",
-      updatedAt: "2024-01-29T22:15:06.671Z",
-      publishedAt: "2023-09-06T22:07:11.090Z",
-    },
-  },
-];
-
-export const AudioPlayer = () => {
+export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
   const playerRef = useRef<ReactPlayer | null>(null);
   const barRef = useRef<HTMLDivElement | null>(null);
 
@@ -206,7 +63,7 @@ export const AudioPlayer = () => {
           >
             <Image
               alt="Image"
-              src={"/images/cover-1.jpg"}
+              src={audioItems[playIndex].attributes.Cover.data.attributes.url}
               layout="fill"
               objectFit="cover"
               className="rounded-lg h-full w-auto"
@@ -244,7 +101,7 @@ export const AudioPlayer = () => {
                   <IoMdSkipBackward className="" />
                 </button>
                 <button
-                  className="!p-0 w-8 h-8 flex items-center justify-center shrink-0 cursor-pointer"
+                  className="!p-0 w-8 h-8 flex items-center justify-center shrink-0 cursor-pointer hover:scale-102 transition-transform"
                   onClick={() => {
                     setSeekTime(0);
                     setDuration(null);

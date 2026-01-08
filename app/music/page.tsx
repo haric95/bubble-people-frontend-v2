@@ -1,5 +1,8 @@
+"use client";
 import Link from "next/link";
 import { AudioPlayer } from "../components/AudioPlayer";
+import { useStrapi } from "../hooks/useStrapi";
+import { MediaAudioItem } from "@/types";
 
 const MUSIC_DUMMY_DATA = {
   LP: [
@@ -83,6 +86,9 @@ const MUSIC_DUMMY_DATA = {
 };
 
 const Music = () => {
+  const data = useStrapi<MediaAudioItem[]>("/media-audio-items", {
+    populate: "*",
+  });
   return (
     <div>
       <div className="w-full py-16 md:p-8 p-4 flex flex-col items-center">
@@ -109,7 +115,7 @@ const Music = () => {
               backgroundPosition: "200% 10%",
             }}
           />
-          <AudioPlayer />
+          {data && <AudioPlayer audioItems={data} />}
         </div>
         <div className="w-full md:px-16 mb-8">
           <h2
