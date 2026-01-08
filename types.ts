@@ -21,4 +21,18 @@ export type MediaAudioItem = {
   };
 };
 
+export type ShopItem = {
+  attributes: {
+    createdAt: string;
+    description: string;
+    images: { data: StrapiImage[] };
+    price: number;
+    publishedAt: string;
+    title: string;
+    updatedAt: string;
+    link: string;
+  };
+};
+
+export type XYCoord = { x: number; y: number };
 export type HTMLString = string;

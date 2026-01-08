@@ -86,9 +86,7 @@ const MUSIC_DUMMY_DATA = {
 };
 
 const Music = () => {
-  const data = useStrapi<MediaAudioItem[]>("/media-audio-items", {
-    populate: "*",
-  });
+  const data = useStrapi<MediaAudioItem[]>("/media-audio-items");
   return (
     <div>
       <div className="w-full py-16 md:p-8 p-4 flex flex-col items-center">

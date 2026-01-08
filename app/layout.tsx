@@ -25,7 +25,7 @@ export default function RootLayout({
             >
               <Header />
               <Footer />
-              <div className="content">{children}</div>
+              <div className="content w-full px-16">{children}</div>
               <div className="w-full h-full absolute flex flex-col pointer-events-none">
                 <img src="/images/texture-1.webp" className="w-full h-auto" />
                 <img src="/images/texture-1.webp" className="w-full h-auto" />

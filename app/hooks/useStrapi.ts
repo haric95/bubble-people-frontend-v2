@@ -9,33 +9,33 @@ export function getStrapiURL(path = "") {
 
 export const useStrapi = <T>(
   path: string,
-  urlParamsObject = {},
-  options = {},
+  // urlParamsObject = {},
+  // options = {},
 ) => {
   const [data, setData] = useState<null | T>(null);
 
   useEffect(() => {
     // Merge default and user options
-    const mergedOptions = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      ...options,
-    };
+    // const mergedOptions = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   ...options,
+    // };
 
     // Build request URL
-    const queryString = qs.stringify(urlParamsObject);
+    const queryString = qs.stringify({ populate: "*" });
     const requestUrl = `${getStrapiURL(
       `/api${path}${queryString ? `?${queryString}` : ""}`,
     )}`;
 
     const getData = async () => {
-      const data = await fetch(requestUrl, mergedOptions);
+      const data = await fetch(requestUrl);
       const jsonData = (await data.json()) as StrapiResponse<T>;
       setData(jsonData.data);
     };
     getData();
-  }, [options, urlParamsObject, path]);
+  }, [path]);
 
   return data;
 };
