@@ -93,7 +93,7 @@ const Music = () => {
         <h1 className="font-title mb-8 text-white text-lg text-outline mix-blend-lighten tracking-widest ">
           Music
         </h1>
-        <div className="w-full md:w-1/2 md:h-32 mb-8 relative border border-white rounded-xl">
+        <div className="w-full md:w-full md:h-32 mb-16 relative border border-white rounded-xl">
           <div className="h-full w-full absolute top-0 rounded-xl pointer-events-none mix-blend-hue bg-black backdrop-hue-rotate-180" />
           {data && <AudioPlayer audioItems={data} />}
         </div>

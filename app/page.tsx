@@ -127,7 +127,7 @@ export default function Home() {
 
         <div className="text-center mb-16">
           <h1 className="font-title mb-4 text-white text-xl" style={{}}>
-            Upcoming
+            Coming Up
           </h1>
           <div className="w-full">
             {UPCOMING_SHOWS.map((show, index) => (

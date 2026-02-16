@@ -5,7 +5,7 @@ export const usePrefetchImages = (images: StrapiImage[]) => {
   useEffect(() => {
     images.map((image) => {
       const i = new Image();
-      i.url = image.attributes.url;
+      i.src = image.attributes.url;
     });
   }, [images]);
 };

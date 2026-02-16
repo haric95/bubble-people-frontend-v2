@@ -1,11 +1,15 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 
 export const Background = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
-  const position = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const positionHome = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const positionShop = useTransform(scrollYProgress, [0, 1], ["20%", "40%"]);
+  const positionMusic = useTransform(scrollYProgress, [0, 1], ["50%", "80%"]);
+  const pathname = usePathname();
 
   return (
     <motion.div
@@ -14,7 +18,14 @@ export const Background = () => {
       style={{
         backgroundImage: "url(/images/background.webp)",
         backgroundSize: "100% auto",
-        backgroundPositionY: position,
+        backgroundPositionY:
+          pathname === "/"
+            ? positionHome
+            : pathname === "/shop"
+              ? positionShop
+              : pathname === "/music"
+                ? positionMusic
+                : "0% 0%",
       }}
     ></motion.div>
   );
