@@ -3,47 +3,34 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Robocode";
+    font-family: "Ethnocentric";
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/robocode-font/Robocode.ttf);
+    src: url(/fonts/Ethnocentric-Regular.otf);
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Second Space";
+    font-family: "LemonMilk";
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/second-space-font/SecondSpace.ttf);
+    src: url(/fonts/LEMONMILK-Regular.otf);
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Brass Mono";
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/brass-mono-font/BrassMonoRegular.ttf);
+    src: url(/fonts/Roboto-Regular.ttf);
 }
 
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family:
-        monospace,
-        -apple-system,
-        BlinkMacSystemFont,
-        Segoe UI,
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        Fira Sans,
-        Droid Sans,
-        Helvetica Neue,
-        sans-serif;
+    font-family: var(--font-main);
     color: #eeeeee;
-    filter: blur(0.018rem);
 }
 
 a {
@@ -102,25 +89,6 @@ a {
     background-color: #aad422;
     mix-blend-mode: difference;
     opacity: 1;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.hover-rotate {
-    animation: rotate 50000ms linear infinite;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-}
-
-.hover-rotate:hover {
-    animation-play-state: running;
 }
 
 ::view-transition-old(root),

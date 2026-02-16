@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import { ViewTransitions } from "next-view-transitions";
+import { Header } from "./components/Header";
+import "./globals.css";
+import { Background } from "./components/Background";
+import { Footer } from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Bubble People",
-  description: "Bubble People Website Online Fun",
+  description: "Bubble People Website",
 };
 
 export default function RootLayout({
@@ -16,23 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" className="overscroll-none">
         <body className={`antialiased`}>
+          <Background />
           <main className="relative">
-            <div
-              className="w-screen flex flex-col items-center absolute bg-bg-blue"
-              style={{}}
-            >
-              <Header />
-              <Footer />
-              <div className="content w-full px-16">{children}</div>
-              <div className="w-full h-full absolute flex flex-col pointer-events-none">
-                <img src="/images/texture-1.webp" className="w-full h-auto" />
-                <img src="/images/texture-1.webp" className="w-full h-auto" />
-                <img src="/images/texture-1.webp" className="w-full h-auto" />
-                <img src="/images/texture-1.webp" className="w-full h-auto" />
-              </div>
-            </div>
+            <Header />
+            <div className="content w-full p-32">{children}</div>
+            <Footer />
           </main>
         </body>
       </html>
