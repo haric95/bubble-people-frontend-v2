@@ -5,7 +5,7 @@ import { useRef } from "react";
 export const Background = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
-  const position = useTransform(scrollYProgress, [0, 1], ["50%", "60%"]);
+  const position = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
     <motion.div

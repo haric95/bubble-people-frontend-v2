@@ -116,3 +116,26 @@ a {
         opacity: 0;
     }
 }
+
+@keyframes rotateY {
+    from {
+        transform: perspective(240px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(240px) rotateY(360deg);
+    }
+}
+
+.animate-rotate-y {
+    animation: rotateY 5000ms linear infinite;
+}
+
+.text-outline {
+    color: black;
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+}

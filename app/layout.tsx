@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import "./globals.css";
 import { Background } from "./components/Background";
 import { Footer } from "./components/Footer";
+import { MarcoLogo } from "./components/MarcoLogo";
 
 export const metadata: Metadata = {
   title: "Bubble People",
@@ -22,8 +23,9 @@ export default function RootLayout({
           <Background />
           <main className="relative">
             <Header />
-            <div className="content w-full p-32">{children}</div>
+            <div className="content w-full px-32 pt-8 pb-32">{children}</div>
             <Footer />
+            <MarcoLogo />
           </main>
         </body>
       </html>

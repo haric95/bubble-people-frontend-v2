@@ -36,7 +36,7 @@ export const Gallery = (props: GalleryProps) => {
   }, [handleNext]);
 
   return (
-    <div className="w-full h-full object-cover relative shadow-2xl">
+    <div className="w-full h-full object-cover relative shadow-2xl rounded-xl overflow-hidden">
       <button
         className="cursor-pointer relative w-full h-full flex items-center justify-center overflow-hidden"
         onClick={handleClick}

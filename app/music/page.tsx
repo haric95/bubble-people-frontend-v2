@@ -89,35 +89,17 @@ const Music = () => {
   const data = useStrapi<MediaAudioItem[]>("/media-audio-items");
   return (
     <div>
-      <div className="w-full py-16 md:p-8 p-4 flex flex-col items-center">
-        <h1
-          className="font-title mb-8 text-highlight text-[64px]"
-          style={{
-            backgroundClip: "text",
-            backgroundImage: "url(/images/mask-1.jpg)",
-            color: "#1CAFC488",
-            filter: "brightness(1.5) contrast(0.8) brightness(1.3)",
-            backgroundSize: "200% 400%",
-          }}
-        >
+      <div className="w-full flex flex-col items-center">
+        <h1 className="font-title mb-8 text-white text-lg text-outline mix-blend-lighten tracking-widest ">
           Music
         </h1>
-        <div className="w-full md:w-1/2 md:h-32 mb-8 relative">
-          <div
-            className="h-full w-full absolute top-0 opacity-20 rounded-xl pointer-events-none"
-            style={{
-              filter:
-                "brightness(2) contrast(0.7) sepia(60%) hue-rotate(125deg) brightness(1.6)",
-              backgroundImage: "url(/images/mask-1.jpg)",
-              backgroundSize: "200% 900%",
-              backgroundPosition: "200% 10%",
-            }}
-          />
+        <div className="w-full md:w-1/2 md:h-32 mb-8 relative border border-white rounded-xl">
+          <div className="h-full w-full absolute top-0 rounded-xl pointer-events-none mix-blend-hue bg-black backdrop-hue-rotate-180" />
           {data && <AudioPlayer audioItems={data} />}
         </div>
-        <div className="w-full md:px-16 mb-8">
+        <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-[48px]"
+            className="font-title mb-4 text-highlight-3 text-lg"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -146,9 +128,9 @@ const Music = () => {
             ))}
           </div>
         </div>
-        <div className="w-full px-16 mb-8">
+        <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-[48px]"
+            className="font-title mb-4 text-highlight-3 text-lg"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -177,9 +159,9 @@ const Music = () => {
             ))}
           </div>
         </div>
-        <div className="w-full px-16 mb-8">
+        <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-[48px]"
+            className="font-title mb-4 text-highlight-3 text-lg"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",

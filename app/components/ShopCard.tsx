@@ -14,28 +14,22 @@ export const ShopCard: React.FC<ShopCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-full h-full bg-black text-white flex opacity-80 hover:opacity-100 transition-all duration-500 rounded-xl ${
+      className={`w-full h-full text-white border border-white flex transition-all duration-500 rounded-xl ${
         direction === "right" && "flex-row-reverse"
       } flex-col md:flex-row`}
     >
       <div
-        className={`h-64 w-full md:w-64 md:h-full bg-black relative shrink-0 content-box border-main`}
+        className={`h-64 w-full md:w-64 md:h-full relative shrink-0 content-box border-main`}
       >
         <img
           src={item.attributes.images.data[0].attributes.url}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="grow bg-black relative">
+      <div className="grow relative">
         <div
-          className="w-full h-full absolute opacity-15"
-          style={{
-            filter:
-              "brightness(2) contrast(0.7) sepia(60%) hue-rotate(125deg) brightness(1.6)",
-            backgroundImage: "url(/images/mask-1.jpg)",
-            backgroundSize: "200% 900%",
-            backgroundPosition: `330% ${index * 10}%`,
-          }}
+          className="w-full h-full absolute bg-black mix-blend-hue -hue-rotate-60"
+          style={{}}
         />
         <div
           className={`top-0 relative p-4 flex flex-col justify-between h-full ${
@@ -46,7 +40,7 @@ export const ShopCard: React.FC<ShopCardProps> = ({
             <h4 className="font-title font-weight-500 tracking-wider mb-4 text-2xl">
               {item.attributes.title}
             </h4>
-            <p className="text-md">{item.attributes.description}</p>
+            <p className="text-sm">{item.attributes.description}</p>
           </div>
           <div
             className={`flex items-center ${

@@ -5,7 +5,7 @@ import { ImSoundcloud } from "react-icons/im";
 
 export const Footer = () => {
   return (
-    <footer className="w-full p-8 flex justify-start fixed bottom-0">
+    <footer className="w-fit p-8 flex justify-start fixed bottom-0">
       <div className="flex flex-col">
         <button className="mb-2 w-8 h-8 hover:scale-105 transition-transform duration-500">
           <a href={"https://www.instagram.com/jasper_drifts/"} target="_blank">
