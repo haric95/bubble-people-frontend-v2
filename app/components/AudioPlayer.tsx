@@ -127,10 +127,9 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
                 }}
               >
                 <div
-                  className={`h-full absolute rounded-xl`}
+                  className={`h-full absolute rounded-xl bg-white`}
                   style={{
                     width: duration ? `${(seekTime / duration) * 100}%` : 0,
-                    backgroundColor: "#d4de14bb",
                   }}
                 ></div>
               </div>

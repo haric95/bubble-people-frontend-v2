@@ -1,6 +1,7 @@
 "use client";
 import { Gallery } from "@/app/components/Gallery";
 import { StrapiImage } from "@/types";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -125,7 +126,13 @@ export default function Home() {
           />
         </div>
 
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-title mb-4 text-white text-xl" style={{}}>
             Coming Up
           </h1>
@@ -150,7 +157,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         <div className="w-full mb-16 text-center">
           <h1 className="font-title mb-8 text-white text-xl" style={{}}>

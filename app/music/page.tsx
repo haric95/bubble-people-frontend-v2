@@ -3,6 +3,8 @@ import Link from "next/link";
 import { AudioPlayer } from "../components/AudioPlayer";
 import { useStrapi } from "../hooks/useStrapi";
 import { MediaAudioItem } from "@/types";
+import { VideoPlayer } from "../components/VideoPlayer";
+import { useCallback, useState } from "react";
 
 const MUSIC_DUMMY_DATA = {
   LP: [
@@ -59,34 +61,23 @@ const MUSIC_DUMMY_DATA = {
   ],
   AV: [
     {
-      title: "Color Dome",
-      year: 2022,
-      cover: "/images/cover-1.jpg",
-      link: "https://bandcamp.com",
-    },
-    {
-      title: "Consequence Unknown",
-      year: 2012,
-      cover: "/images/cover-2.jpg",
-      link: "https://bandcamp.com",
-    },
-    {
-      title: "Old Habits",
-      year: 2016,
-      cover: "/images/cover-3.jpg",
-      link: "https://bandcamp.com",
-    },
-    {
-      title: "Escape Plane",
+      title: "M.O.B CORE",
       year: 2025,
-      cover: "/images/cover-4.jpg",
-      link: "https://bandcamp.com",
+      cover: "/images/MOB.webp",
+      link: "https://www.youtube.com/watch?v=qbyZbwMOXAI",
     },
   ],
 };
 
 const Music = () => {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   const data = useStrapi<MediaAudioItem[]>("/media-audio-items");
+
+  const handleClose = useCallback(() => {
+    setActiveVideo(null);
+  }, []);
+
   return (
     <div>
       <div className="w-full flex flex-col items-center">
@@ -94,7 +85,10 @@ const Music = () => {
           Music
         </h1>
         <div className="w-full md:w-full md:h-32 mb-16 relative border border-white rounded-xl">
-          <div className="h-full w-full absolute top-0 rounded-xl pointer-events-none mix-blend-hue bg-black backdrop-hue-rotate-180" />
+          <div
+            className="h-full w-full absolute top-0 rounded-xl pointer-events-none mix-blend-hue bg-black filter-hue-rotate-180 brightness-150"
+            style={{ filter: "hue-rotate(200deg) brightness(1.5)" }}
+          />
           {data && <AudioPlayer audioItems={data} />}
         </div>
         <div className="w-full mb-8">
@@ -174,11 +168,12 @@ const Music = () => {
           </h2>
           <div className="flex flex-wrap justify-between">
             {MUSIC_DUMMY_DATA.AV.map((item, index) => (
-              <Link
+              <button
                 key={item.title}
-                href={item.link}
-                className={`w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${index % 3 === 0 ? "pr-[2%]" : index % 3 === 1 ? "px-[1%]" : "pl-[2%]"}`}
-                target={"_blank"}
+                onClick={() => {
+                  setActiveVideo(item.link);
+                }}
+                className={`w-1/3 mb-8 cursor-pointer hover:scale-101 transition-transform duration-500 text-left ${index % 3 === 0 ? "pr-[2%]" : index % 3 === 1 ? "px-[1%]" : "pl-[2%]"}`}
               >
                 <img
                   src={item.cover}
@@ -186,8 +181,9 @@ const Music = () => {
                 />
                 <p>{item.title}</p>
                 <p>{item.year}</p>
-              </Link>
+              </button>
             ))}
+            <VideoPlayer url={activeVideo} handleClose={handleClose} />
           </div>
         </div>
       </div>

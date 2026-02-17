@@ -5,11 +5,14 @@ import "./globals.css";
 import { Background } from "./components/Background";
 import { Footer } from "./components/Footer";
 import { MarcoLogo } from "./components/MarcoLogo";
+import { Lexend_Deca } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Bubble People",
   description: "Bubble People Website",
 };
+
+const Lexend = Lexend_Deca({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -19,7 +22,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" className="overscroll-none">
-        <body className={`antialiased`}>
+        <body className={`antialiased ${Lexend.className}`}>
           <Background />
           <main className="relative">
             <Header />
