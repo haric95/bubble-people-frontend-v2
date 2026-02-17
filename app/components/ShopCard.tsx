@@ -1,5 +1,5 @@
-import { ShopItem, XYCoord } from "@/types";
-import React, { useEffect, useMemo, useState } from "react";
+import { ShopItem } from "@/types";
+import React from "react";
 
 type ShopCardProps = {
   item: ShopItem;

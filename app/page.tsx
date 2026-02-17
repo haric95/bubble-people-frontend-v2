@@ -95,11 +95,11 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center">
-        <div className="mb-16 text-center whitespace-break-spaces">
+        <motion.div className="mb-16 text-center whitespace-break-spaces">
           <Markdown>{BIO}</Markdown>
-        </div>
+        </motion.div>
 
-        <div className="w-full md:w-full aspect-[1.77] mb-16">
+        <motion.div className="w-full md:w-full aspect-[1.77] mb-16">
           <Gallery
             images={[
               {
@@ -124,7 +124,7 @@ export default function Home() {
               },
             ]}
           />
-        </div>
+        </motion.div>
 
         <motion.div
           className="text-center mb-16"
@@ -159,7 +159,13 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="w-full mb-16 text-center">
+        <motion.div
+          className="w-full mb-16 text-center"
+          initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-title mb-8 text-white text-xl" style={{}}>
             Notable Works
           </h1>
@@ -176,9 +182,15 @@ export default function Home() {
             ))}
             <div className="" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full mb-16 text-center">
+        <motion.div
+          className="w-full mb-16 text-center"
+          initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-title mb-8 text-white text-xl" style={{}}>
             Past Shows
           </h1>
@@ -190,9 +202,15 @@ export default function Home() {
             ))}
             <div className="" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full mb-16 text-center">
+        <motion.div
+          className="w-full mb-16 text-center"
+          initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h1 className="font-title mb-8 text-white text-xl" style={{}}>
             Supporters
           </h1>
@@ -206,7 +224,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

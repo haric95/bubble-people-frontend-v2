@@ -1,3 +1,4 @@
+import { Loader } from "@/app/components/Loader";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import { Header } from "./components/Header";
@@ -23,6 +24,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" className="overscroll-none">
         <body className={`antialiased ${Lexend.className}`}>
+          <Loader />
           <Background />
           <main className="relative">
             <Header />
