@@ -1,4 +1,5 @@
 import { ShopItem } from "@/types";
+import Link from "next/link";
 import React from "react";
 
 type ShopCardProps = {
@@ -13,13 +14,15 @@ export const ShopCard: React.FC<ShopCardProps> = ({
   index,
 }) => {
   return (
-    <div
-      className={`w-full h-full text-white border border-white flex transition-all duration-500 rounded-xl ${
+    <Link
+      target="_blank"
+      href={item.attributes.link}
+      className={`w-full h-full text-white flex transition-all duration-500 ${
         direction === "right" && "flex-row-reverse"
       } flex-col md:flex-row`}
     >
       <div
-        className={`h-64 w-full md:w-64 md:h-full relative shrink-0 content-box border-main`}
+        className={`h-full md:h-64 w-full md:w-64 relative shrink-0 content-box border-main`}
       >
         <img
           src={item.attributes.images.data[0].attributes.url}
@@ -37,25 +40,23 @@ export const ShopCard: React.FC<ShopCardProps> = ({
           }`}
         >
           <div className="mb-2 md:mb-0">
-            <h4 className="font-title font-weight-500 tracking-wider mb-4 text-2xl">
+            <h4 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-2xl heading-text-shadow">
               {item.attributes.title}
             </h4>
-            <p className="text-sm">{item.attributes.description}</p>
+            <p className="md:text-sm">{item.attributes.description}</p>
           </div>
           <div
             className={`flex items-center ${
               direction === "left" && "flex-row-reverse"
             }`}
           >
-            <a href={item.attributes.link} target="_blank" rel="noreferrer">
-              <button className="mr-2 text-highlight-3 cursor-pointer hover:scale-102 transition-transform duration-500">
-                Buy
-              </button>
-            </a>
-            <p className="mr-2">£{item.attributes.price}</p>
+            <button className="flex items-center font-title text-md mr-2 text-highlight-3 cursor-pointer hover:scale-102 transition-transform duration-500">
+              Buy
+            </button>
+            <p className="mr-4 text-md">£{item.attributes.price}</p>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

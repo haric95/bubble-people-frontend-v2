@@ -14,7 +14,8 @@ const Shop = async () => {
         data.data.map((shopItem, index) => (
           <div
             key={index}
-            className="md: h-64 w-full mb-4 rounded-xl overflow-hidden"
+            className="h-auto md:h-64 w-full mb-4 overflow-hidden"
+            style={{ boxShadow: "4px 4px 4px #00000088" }}
           >
             <ShopCard item={shopItem} direction={"left"} index={index} />
           </div>

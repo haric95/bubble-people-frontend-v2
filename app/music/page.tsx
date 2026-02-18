@@ -5,6 +5,8 @@ import { useStrapi } from "../hooks/useStrapi";
 import { MediaAudioItem } from "@/types";
 import { VideoPlayer } from "../components/VideoPlayer";
 import { useCallback, useState } from "react";
+import { motion } from "motion/react";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const MUSIC_DUMMY_DATA = {
   LP: [
@@ -71,6 +73,8 @@ const MUSIC_DUMMY_DATA = {
 
 const Music = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const { isMobile } = useIsMobile();
+  console.log(isMobile);
 
   const data = useStrapi<MediaAudioItem[]>("/media-audio-items");
 
@@ -84,16 +88,16 @@ const Music = () => {
         <h1 className="font-title mb-8 text-white text-lg text-outline mix-blend-lighten tracking-widest ">
           Music
         </h1>
-        <div className="w-full md:w-full md:h-32 mb-16 relative border border-white rounded-xl">
+        <div className="w-full md:w-full md:h-32 mb-16 relative shadow-2xl">
           <div
-            className="h-full w-full absolute top-0 rounded-xl pointer-events-none mix-blend-hue bg-black filter-hue-rotate-180 brightness-150"
-            style={{ filter: "hue-rotate(200deg) brightness(1.5)" }}
+            className="h-full w-full absolute top-0 pointer-events-none mix-blend-hue bg-black filter-hue-rotate-180 brightness-150 custom-box-shadow"
+            style={{ filter: "hue-rotate(280deg) brightness(1.5)" }}
           />
           {data && <AudioPlayer audioItems={data} />}
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg"
+            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -109,12 +113,12 @@ const Music = () => {
               <Link
                 key={item.title}
                 href={item.link}
-                className={`w-1/2 md:w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${index % 3 === 0 ? "md:pr-[2%]" : index % 3 === 1 ? "md:px-[1%]" : "md:pl-[2%]"} ${index % 2 === 1 ? "pl-[1%]" : "pr-[1%]"}`}
+                className={`w-1/2 md:w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${!isMobile && (index % 3 === 0 ? "md:pr-[2%]" : index % 3 === 1 ? "md:px-[1%]" : "md:pl-[2%]")} ${isMobile && (index % 2 === 1 ? "pl-[1%]" : "pr-[1%]")}`}
                 target={"_blank"}
               >
                 <img
                   src={item.cover}
-                  className="rounded-lg mb-2 w-full shadow-2xl"
+                  className="mb-2 w-full shadow-2xl rounded-xl"
                 />
                 <p>{item.title}</p>
                 <p>{item.year}</p>
@@ -124,7 +128,7 @@ const Music = () => {
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg"
+            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -140,12 +144,12 @@ const Music = () => {
               <Link
                 key={item.title}
                 href={item.link}
-                className={`w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${index % 3 === 0 ? "pr-[2%]" : index % 3 === 1 ? "px-[1%]" : "pl-[2%]"}`}
+                className={`w-1/2 md:w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${!isMobile && (index % 3 === 0 ? "md:pr-[2%]" : index % 3 === 1 ? "md:px-[1%]" : "md:pl-[2%]")} ${isMobile && (index % 2 === 1 ? "pl-[1%]" : "pr-[1%]")}`}
                 target={"_blank"}
               >
                 <img
                   src={item.cover}
-                  className="rounded-lg mb-2 w-full shadow-2xl"
+                  className="mb-2 w-full shadow-2xl rounded-xl"
                 />
                 <p>{item.title}</p>
                 <p>{item.year}</p>
@@ -155,7 +159,7 @@ const Music = () => {
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg"
+            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -166,25 +170,25 @@ const Music = () => {
           >
             AV
           </h2>
-          <div className="flex flex-wrap justify-between">
+          <motion.div className="flex flex-wrap justify-between">
             {MUSIC_DUMMY_DATA.AV.map((item, index) => (
               <button
                 key={item.title}
                 onClick={() => {
                   setActiveVideo(item.link);
                 }}
-                className={`w-1/3 mb-8 cursor-pointer hover:scale-101 transition-transform duration-500 text-left ${index % 3 === 0 ? "pr-[2%]" : index % 3 === 1 ? "px-[1%]" : "pl-[2%]"}`}
+                className={`w-1/2 md:w-1/3 mb-8 hover:scale-101 transition-transform duration-500 ${!isMobile && (index % 3 === 0 ? "md:pr-[2%]" : index % 3 === 1 ? "md:px-[1%]" : "md:pl-[2%]")} ${isMobile && (index % 2 === 1 ? "pl-[1%]" : "pr-[1%]")}`}
               >
                 <img
                   src={item.cover}
-                  className="rounded-lg mb-2 w-full shadow-2xl"
+                  className="b-2 w-full shadow-2xl rounded-xl"
                 />
                 <p>{item.title}</p>
                 <p>{item.year}</p>
               </button>
             ))}
             <VideoPlayer url={activeVideo} handleClose={handleClose} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

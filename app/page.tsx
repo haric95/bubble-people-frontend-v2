@@ -95,11 +95,11 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col items-center">
-        <motion.div className="mb-16 text-center whitespace-break-spaces">
+        <motion.div className="mb-8 md:mb-16 text-center whitespace-break-spaces text-shadow-2xl">
           <Markdown>{BIO}</Markdown>
         </motion.div>
 
-        <motion.div className="w-full md:w-full aspect-[1.77] mb-16">
+        <motion.div className="w-full md:w-full aspect-[1.77] mb-8 md:mb-16 custom-box-shadow">
           <Gallery
             images={[
               {
@@ -127,31 +127,35 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
           initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-title mb-4 text-white text-xl" style={{}}>
+          <h1 className="font-title mb-4 text-white text-lg md:text-xl heading-text-shadow">
             Coming Up
           </h1>
           <div className="w-full">
             {UPCOMING_SHOWS.map((show, index) => (
               <div
-                className={`flex justify-center items-center ${index !== UPCOMING_SHOWS.length - 1 ? "mb-4" : ""}`}
+                className={`flex flex-col md:flex-row mb-4 md:mb-0 justify-center items-center ${index !== UPCOMING_SHOWS.length - 1 ? "mb-4" : ""}`}
                 key={show.url}
               >
-                <p className="">
-                  {show.title} - {new Date(show.date).toDateString()}{" "}
-                  {new Date(show.date).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
+                <p className="mb-2 md:mb-0">
+                  {show.title} -
+                  <span className="font-extrabold">
+                    {" "}
+                    {new Date(show.date).toDateString()}{" "}
+                    {new Date(show.date).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                  </span>
                 </p>
                 <Link href={show.url} target="_blank" className="g">
-                  <div className="mx-8 font-title text-sm border-2 border-white rounded-lg px-2 py-1 text-highlight-2 cursor-pointer hover:scale-105 transition-transform duration-500">
-                    <p className="translate-y-px">INFO</p>
+                  <div className="mx-8 font-title text-sm border-2 border-white px-2 py-1 text-highlight-2 cursor-pointer hover:scale-105 transition-transform duration-500">
+                    <p className="heading-text-shadow">INFO</p>
                   </div>
                 </Link>
               </div>
@@ -160,22 +164,28 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="w-full mb-16 text-center"
+          className="w-full mb-8 md:mb-16 text-center heading-text-shadow"
           initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-title mb-8 text-white text-xl" style={{}}>
+          <h1
+            className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow"
+            style={{}}
+          >
             Notable Works
           </h1>
           <div className="w-full">
             {NOTABLE_WORKS.map((work) => (
-              <div className="w-full flex mb-8" key={work.title}>
-                <div className="w-1/3 flex items-center justify-center rounded-xl overflow-hidden">
+              <div
+                className="w-full flex flex-col md:flex-row mb-8"
+                key={work.title}
+              >
+                <div className="w-full md:w-1/3 mb-2 md:mb-0 flex items-center justify-center overflow-hidden">
                   <img src={work.image.attributes.url} alt="image" />
                 </div>
-                <div className="w-2/3 pl-4 text-right">
+                <div className="w-full text-left md:w-2/3 md:pl-4 md:text-right">
                   <Markdown>{work.description}</Markdown>
                 </div>
               </div>
@@ -185,13 +195,16 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="w-full mb-16 text-center"
+          className="w-full mb-8 md:mb-16 text-center"
           initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-title mb-8 text-white text-xl" style={{}}>
+          <h1
+            className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow"
+            style={{}}
+          >
             Past Shows
           </h1>
           <div className="w-full text-center">
@@ -205,13 +218,13 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="w-full mb-16 text-center"
+          className="w-full mb-8 md:mb-16 text-center"
           initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
           whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h1 className="font-title mb-8 text-white text-xl" style={{}}>
+          <h1 className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow">
             Supporters
           </h1>
           <div className="w-full flex justify-around">
@@ -220,7 +233,10 @@ export default function Home() {
                 className="h-32 flex items-center justify-center"
                 key={supporter.name}
               >
-                <img src={supporter.logo} className="grow-1 w-auto h-32" />
+                <img
+                  src={supporter.logo}
+                  className="grow-1 w-auto h-32 object-scale-down"
+                />
               </div>
             ))}
           </div>

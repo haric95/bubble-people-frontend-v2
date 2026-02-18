@@ -21,19 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className="overscroll-none">
-        <body className={`antialiased ${Lexend.className}`}>
-          <Loader />
-          <Background />
+    <html lang="en" className="overscroll-none">
+      <body className={`antialiased ${Lexend.className}`}>
+        <Loader />
+        <Background />
+        <ViewTransitions>
           <main className="relative">
             <Header />
-            <div className="content w-full px-32 pt-8 pb-32">{children}</div>
+            <div className="content w-full px-4 md:px-32 pt-8 pb-32">
+              {children}
+            </div>
             <Footer />
             <MarcoLogo />
           </main>
-        </body>
-      </html>
-    </ViewTransitions>
+        </ViewTransitions>
+      </body>
+    </html>
   );
 }

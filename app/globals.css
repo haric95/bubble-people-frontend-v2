@@ -11,10 +11,10 @@
 
 @font-face {
     font-display: swap;
-    font-family: "LemonMilk";
+    font-family: "Carbon";
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/LEMONMILK-Regular.otf);
+    src: url(/fonts/carbon/carbon.otf);
 }
 
 @font-face {
@@ -138,4 +138,16 @@ a {
         2px -2px 0 #fff,
         -2px 2px 0 #fff,
         2px 2px 0 #fff;
+}
+
+.heading-text-shadow {
+    text-shadow: 4px 4px 2px #00000088;
+}
+
+.custom-box-shadow {
+    box-shadow: 2px 2px 8px #000000cc;
+}
+
+.logo-shadow {
+    filter: drop-shadow(2px 4px 6px #00000088);
 }

@@ -54,7 +54,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
         }}
       />
       <div className="w-full h-full">
-        <div className="w-full h-full flex flex-col md:flex-row items-stretch p-2 rounded-xl">
+        <div className="w-full h-full flex flex-col md:flex-row items-stretch p-2">
           <button
             className="relative aspect-square h-full flex items-center justify-center shrink-0 mb-2 md:mb-0 cursor-pointer"
             onClick={() => {
@@ -66,7 +66,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
               src={audioItems[playIndex].attributes.Cover.data.attributes.url}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg h-full w-auto"
+              className="h-full w-auto"
             />
           </button>
           <div className="flex flex-col justify-between h-full md:ml-2 w-full">
@@ -127,7 +127,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
                 }}
               >
                 <div
-                  className={`h-full absolute rounded-xl bg-white`}
+                  className={`h-full absolute bg-white rounded-xl`}
                   style={{
                     width: duration ? `${(seekTime / duration) * 100}%` : 0,
                   }}

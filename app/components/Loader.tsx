@@ -9,7 +9,7 @@ export const Loader = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsActive(false);
-    }, 4000);
+    }, 2000);
 
     return () => {
       clearTimeout(timeout);
