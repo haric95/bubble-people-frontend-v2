@@ -1,19 +1,18 @@
 "use client";
-
 import { useCallback, useEffect, useState } from "react";
 const BREAKPOINT = 768;
 
 export const useIsMobile = () => {
   const getSize = useCallback(() => {
-    if (window) {
-      return window.innerWidth < BREAKPOINT;
+    if (typeof window !== "undefined") {
+      return window?.innerWidth < BREAKPOINT;
     }
     return false;
   }, []);
   const [isMobile, setIsMobile] = useState<boolean | null>(getSize);
 
   const handleSizeChange = () => {
-    if (window.innerWidth >= BREAKPOINT) {
+    if (typeof window !== "undefined" && window.innerWidth >= BREAKPOINT) {
       setIsMobile(false);
     } else {
       setIsMobile(true);
@@ -21,10 +20,14 @@ export const useIsMobile = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleSizeChange);
+    if (typeof window !== "undefined") {
+      window?.addEventListener("resize", handleSizeChange);
+    }
 
     return () => {
-      window.removeEventListener("resize", handleSizeChange);
+      if (typeof window !== "undefined") {
+        window?.removeEventListener("resize", handleSizeChange);
+      }
     };
   }, []);
 

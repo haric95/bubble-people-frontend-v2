@@ -22,13 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overscroll-none">
-      <body className={`antialiased ${Lexend.className}`}>
+      <body className={`antialiased ${Lexend.className} min-h-screen`}>
         <Loader />
         <Background />
         <ViewTransitions>
-          <main className="relative">
+          <main className="relative h-full">
             <Header />
-            <div className="content w-full px-4 md:px-32 pt-8 pb-32">
+            <div className="content w-full px-4 md:px-32 pt-8 pb-32 md:min-h-[calc(100vh - 288px)]">
               {children}
             </div>
             <Footer />

@@ -13,13 +13,15 @@ export const Background = () => {
   const pathname = usePathname();
   const { isMobile } = useIsMobile();
 
+  console.log(isMobile);
+
   return (
     <motion.div
       ref={backgroundRef}
       className="w-screen h-screen fixed"
       style={{
         backgroundImage: "url(/images/background.webp)",
-        backgroundSize: `${isMobile ? "200%" : "100%"} auto`,
+        // backgroundSize: `${isMobile ? "200%" : "100%"} auto`,
         backgroundPositionY:
           pathname === "/"
             ? positionHome

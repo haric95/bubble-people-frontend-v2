@@ -74,7 +74,6 @@ const MUSIC_DUMMY_DATA = {
 const Music = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const { isMobile } = useIsMobile();
-  console.log(isMobile);
 
   const data = useStrapi<MediaAudioItem[]>("/media-audio-items");
 
