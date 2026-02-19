@@ -21,7 +21,7 @@ export const Background = () => {
       className="w-screen h-screen fixed"
       style={{
         backgroundImage: "url(/images/background.webp)",
-        // backgroundSize: `${isMobile ? "200%" : "100%"} auto`,
+        backgroundSize: `${isMobile ? "200%" : "100%"} auto`,
         backgroundPositionY:
           pathname === "/"
             ? positionHome
