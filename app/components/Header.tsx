@@ -7,7 +7,7 @@ export const Header = () => {
     <header className="flex py-4 w-full items-center font-title hue-rotate-90">
       <div className="flex justify-center h-full items-center grow">
         <Link href="/music" className="cursor-pointer h-full flex items-center">
-          <h1 className="tracking-wide text-md md:text-lg hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
+          <h1 className="tracking-wide text-md md:text-lg w-16 md:w-24 text-center hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
             Music
           </h1>
         </Link>
@@ -27,7 +27,7 @@ export const Header = () => {
       </div>
       <div className="flex justify-center h-full items-center grow">
         <Link href="/shop" className="cursor-pointer">
-          <h1 className="tracking-wide text-md md:text-lg hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
+          <h1 className="tracking-wide text-md md:text-lg w-16 md:w-24 text-center hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
             Shop
           </h1>
         </Link>
