@@ -43,7 +43,7 @@ export const ShopCard: React.FC<ShopCardProps> = ({
             <h4 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-2xl heading-text-shadow">
               {item.attributes.title}
             </h4>
-            <p className="md:text-sm">{item.attributes.description}</p>
+            <p className="text-sm md:text-md">{item.attributes.description}</p>
           </div>
           <div
             className={`flex items-center ${
