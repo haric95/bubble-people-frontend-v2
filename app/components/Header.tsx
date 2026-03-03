@@ -21,6 +21,7 @@ export const Header = () => {
             <img
               src="/images/logo-test-3.png"
               className="w-full h-full drop-shadow-2xl"
+              style={{ imageOrientation: "none" }}
             />
           </div>
         </Link>
