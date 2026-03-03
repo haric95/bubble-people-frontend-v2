@@ -31,7 +31,7 @@ export const ShopCard: React.FC<ShopCardProps> = ({
       </div>
       <div className="grow relative">
         <div
-          className="w-full h-full absolute bg-black mix-blend-hue -hue-rotate-60"
+          className="w-full h-full absolute bg-[#000000cc] -hue-rotate-60"
           style={{}}
         />
         <div

@@ -85,10 +85,7 @@ const Music = () => {
     <div>
       <div className="w-full flex flex-col items-center">
         <div className="w-full md:w-full md:h-32 mb-16 relative shadow-2xl">
-          <div
-            className="h-full w-full absolute top-0 pointer-events-none mix-blend-hue bg-black filter-hue-rotate-180 brightness-150 custom-box-shadow"
-            style={{ filter: "hue-rotate(280deg) brightness(1.5)" }}
-          />
+          <div className="h-full w-full absolute top-0 pointer-events-none bg-[#000000cc] custom-box-shadow" />
           {data && <AudioPlayer audioItems={data} />}
         </div>
         <div className="w-full mb-8">

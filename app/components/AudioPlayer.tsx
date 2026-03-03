@@ -70,16 +70,20 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
             />
           </button>
           <div className="flex flex-col justify-between h-full md:ml-2 w-full">
-            <p className="text-[16px]">
+            <p
+              className="text-[16px] text-white"
+              style={{ filter: "brightness(1)" }}
+            >
               {audioItems[playIndex].attributes.Title} -{" "}
               {audioItems[playIndex].attributes.Artist}
             </p>
-            <p className="text-[12px]">
+            <p className="text-[12px]" style={{ filter: "brightness(1)" }}>
               {playIndex + 1} / {audioItems.length}
             </p>
             <div className="flex w-full justify-between mb-2">
               <button
                 className="!p-0 w-8 h-8 flex items-center justify-start shrink-0 mr-4 cursor-pointer"
+                style={{ filter: "brightness(1)" }}
                 onClick={() => {
                   setIsPlaying((old) => !old);
                 }}
@@ -98,7 +102,10 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
                     );
                   }}
                 >
-                  <IoMdSkipBackward className="" />
+                  <IoMdSkipBackward
+                    className=""
+                    style={{ filter: "brightness(1)" }}
+                  />
                 </button>
                 <button
                   className="!p-0 w-8 h-8 flex items-center justify-center shrink-0 cursor-pointer hover:scale-102 transition-transform"
@@ -108,7 +115,10 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
                     setPlayIndex((old) => (old + 1) % audioItems.length);
                   }}
                 >
-                  <IoMdSkipForward className="" />
+                  <IoMdSkipForward
+                    className=""
+                    style={{ filter: "brightness(1)" }}
+                  />
                 </button>
               </div>
             </div>
