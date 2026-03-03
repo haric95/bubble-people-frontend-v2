@@ -7,9 +7,6 @@ const Shop = async () => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <h1 className="font-title mb-8 text-white text-lg text-outline mix-blend-lighten tracking-widest">
-        Shop
-      </h1>
       {data &&
         data.data.map((shopItem, index) => (
           <div

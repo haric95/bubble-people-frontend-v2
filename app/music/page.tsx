@@ -84,9 +84,6 @@ const Music = () => {
   return (
     <div>
       <div className="w-full flex flex-col items-center">
-        <h1 className="font-title mb-8 text-white text-lg text-outline mix-blend-lighten tracking-widest ">
-          Music
-        </h1>
         <div className="w-full md:w-full md:h-32 mb-16 relative shadow-2xl">
           <div
             className="h-full w-full absolute top-0 pointer-events-none mix-blend-hue bg-black filter-hue-rotate-180 brightness-150 custom-box-shadow"
