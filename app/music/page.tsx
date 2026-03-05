@@ -90,7 +90,7 @@ const Music = () => {
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
+            className="font-title mb-4 text-highlight-3 text-xl heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -121,7 +121,7 @@ const Music = () => {
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
+            className="font-title mb-4 text-highlight-3 text-xl heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
@@ -152,7 +152,7 @@ const Music = () => {
         </div>
         <div className="w-full mb-8">
           <h2
-            className="font-title mb-4 text-highlight-3 text-lg heading-text-shadow"
+            className="font-title mb-4 text-highlight-3 text-xl heading-text-shadow"
             style={{
               backgroundClip: "text",
               backgroundImage: "url(/images/mask-1.jpg)",
