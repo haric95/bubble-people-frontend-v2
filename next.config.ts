@@ -7,12 +7,14 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
+  output: "export",
   images: {
     remotePatterns: [
       new URL("https://placehold.co/**"),
       new URL("https://picsum.photos/**"),
       new URL("https://res.cloudinary.com/**"),
     ],
+    unoptimized: true,
   },
 };
 

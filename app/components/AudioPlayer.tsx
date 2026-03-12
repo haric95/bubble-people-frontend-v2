@@ -1,5 +1,5 @@
 "use client";
-import { MediaAudioItem, StrapiImage } from "@/types";
+import { MediaAudioItem } from "@/types";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import {
@@ -10,17 +10,6 @@ import {
 } from "react-icons/io";
 import ReactPlayer from "react-player";
 
-// type MediaVideoItem = {
-//   id: number;
-//   attributes: {
-//     title: string;
-//     link: string;
-//     index: number;
-//     createdAt: string;
-//     updatedAt: string;
-//     publishedAt: string;
-//   };
-// };
 type AudioPlayerProps = { audioItems: MediaAudioItem[] };
 
 export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
@@ -37,7 +26,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
       <ReactPlayer
         key={playIndex}
         ref={playerRef}
-        url={audioItems[playIndex].attributes.HostLink}
+        url={audioItems[playIndex].hostLink}
         width="100%"
         height="0px"
         playing={isPlaying}
@@ -63,7 +52,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
           >
             <Image
               alt="Image"
-              src={audioItems[playIndex].attributes.Cover.data.attributes.url}
+              src={audioItems[playIndex].cover}
               layout="fill"
               objectFit="cover"
               className="h-full w-auto"
@@ -74,8 +63,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
               className="text-[16px] text-white"
               style={{ filter: "brightness(1)" }}
             >
-              {audioItems[playIndex].attributes.Title} -{" "}
-              {audioItems[playIndex].attributes.Artist}
+              {audioItems[playIndex].title} - {audioItems[playIndex].artist}
             </p>
             <p className="text-[12px]" style={{ filter: "brightness(1)" }}>
               {playIndex + 1} / {audioItems.length}

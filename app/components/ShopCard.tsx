@@ -1,22 +1,19 @@
-import { ShopItem } from "@/types";
+import { SiteData } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 type ShopCardProps = {
-  item: ShopItem;
+  item: SiteData["shop"]["items"][0];
   direction: "left" | "right";
   index: number;
 };
 
-export const ShopCard: React.FC<ShopCardProps> = ({
-  direction,
-  item,
-  index,
-}) => {
+export const ShopCard: React.FC<ShopCardProps> = ({ direction, item }) => {
   return (
     <Link
       target="_blank"
-      href={item.attributes.link}
+      href={item.link}
       className={`w-full h-full text-white flex transition-all duration-500 ${
         direction === "right" && "flex-row-reverse"
       } flex-col md:flex-row`}
@@ -24,8 +21,10 @@ export const ShopCard: React.FC<ShopCardProps> = ({
       <div
         className={`h-full md:h-64 w-full md:w-64 relative shrink-0 content-box border-main`}
       >
-        <img
-          src={item.attributes.images.data[0].attributes.url}
+        <Image
+          src={item.image.url}
+          alt="cover"
+          fill
           className="w-full h-full object-cover"
         />
       </div>
@@ -40,20 +39,20 @@ export const ShopCard: React.FC<ShopCardProps> = ({
           }`}
         >
           <div className="mb-2 md:mb-0">
-            <h4 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-2xl heading-text-shadow">
-              {item.attributes.title}
+            <h4 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-lg heading-text-shadow">
+              {item.title}
             </h4>
-            <p className="text-sm md:text-md">{item.attributes.description}</p>
+            <p className="text-md md:text-sm">{item.description}</p>
           </div>
           <div
             className={`flex items-center ${
               direction === "left" && "flex-row-reverse"
             }`}
           >
-            <button className="flex items-center font-title text-md mr-2 text-highlight-3 cursor-pointer hover:scale-102 transition-transform duration-500">
+            <button className="flex items-center translate-y-px font-title text-lg mr-2 text-highlight-3 cursor-pointer hover:scale-102 transition-transform duration-500">
               Buy
             </button>
-            <p className="mr-4 text-md">£{item.attributes.price}</p>
+            <p className="mr-4 text-xs md:text-md">£{item.price}</p>
           </div>
         </div>
       </div>

@@ -5,20 +5,20 @@ export type StrapiImage = {
   };
 };
 
+export type CMSImage = { url: string; alt: string };
+
+export type MusicItem = {
+  title: string;
+  year: number;
+  cover: string;
+  link: string;
+};
+
 export type MediaAudioItem = {
-  id: number;
-  attributes: {
-    Title: string;
-    Artist: string;
-    Album: string;
-    HostLink: string;
-    BandcampLink: string;
-    Index: number;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    Cover: StrapiResponse<StrapiImage>;
-  };
+  title: string;
+  artist: string;
+  cover: string;
+  hostLink: string;
 };
 
 export type ShopItem = {
@@ -31,6 +31,32 @@ export type ShopItem = {
     title: string;
     updatedAt: string;
     link: string;
+  };
+};
+
+export type SiteData = {
+  home: {
+    bio: string;
+    gallery: CMSImage[];
+    upcoming: { title: string; date: string; url: string }[];
+    notable: { title: string; description: string; image: CMSImage }[];
+    past: { title: string; url: string }[];
+    supporters: { name: string; logo: string; link: string }[];
+  };
+  shop: {
+    items: {
+      title: string;
+      description: string;
+      price: number;
+      link: string;
+      image: CMSImage;
+    }[];
+  };
+  music: {
+    player: MediaAudioItem[];
+    LP: MusicItem[];
+    EP: MusicItem[];
+    AV: MusicItem[];
   };
 };
 

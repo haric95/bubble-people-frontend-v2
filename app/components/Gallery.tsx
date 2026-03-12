@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import { StrapiImage } from "@/types";
+import { CMSImage, StrapiImage } from "@/types";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePrefetchImages } from "../hooks/usePrefetchImages";
 
 type GalleryProps = {
-  images: StrapiImage[];
+  images: CMSImage[];
 };
 
 export const Gallery = (props: GalleryProps) => {
@@ -43,11 +43,11 @@ export const Gallery = (props: GalleryProps) => {
       >
         {props.images.map((image, index) => (
           <Image
-            src={image.attributes.url}
+            src={image.url}
             alt={"image"}
             width={600}
             height={400}
-            key={image.attributes.url}
+            key={image.url}
             className="transition-opacity duration-1000 absolute w-full h-fill object-cover object-center"
             style={{
               opacity: index === visibleImageIndex ? "100%" : "0%",

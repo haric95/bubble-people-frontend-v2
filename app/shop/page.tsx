@@ -1,14 +1,14 @@
-import { ShopItem } from "@/types";
+import { SiteData } from "@/types";
 import { ShopCard } from "../components/ShopCard";
-import { fetchStrapi } from "../hooks/fetchStrapi";
 
 const Shop = async () => {
-  const data = await fetchStrapi<ShopItem[]>("/shop-items");
-
+  const data = (await fetch(`${process.env.DATA_SOURCE_URI}/shop.json`).then(
+    (data) => data.json(),
+  )) as SiteData["shop"];
   return (
     <div className="w-full flex flex-col items-center">
       {data &&
-        data.data.map((shopItem, index) => (
+        data.items.map((shopItem, index) => (
           <div
             key={index}
             className="h-auto md:h-64 w-full mb-4 overflow-hidden"
