@@ -1,10 +1,17 @@
-import { SiteData } from "@/types";
+import {
+  STRAPI_BASE_URL,
+  SHOP_POPULATE_QUERY,
+  StrapiShopResponse,
+  translateShopPage,
+} from "@/lib/strapi";
 import { ShopCard } from "../components/ShopCard";
 
 const Shop = async () => {
-  const data = (await fetch(`${process.env.DATA_SOURCE_URI}/shop.json`).then(
-    (data) => data.json(),
-  )) as SiteData["shop"];
+  const raw = (await fetch(
+    `${STRAPI_BASE_URL}/api/bubble-people-shop?${SHOP_POPULATE_QUERY}`,
+  ).then((res) => res.json())) as StrapiShopResponse;
+
+  const data = translateShopPage(raw.data);
   return (
     <div className="w-full flex flex-col items-center">
       {data &&
