@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "DATA_SOURCE_URL=https://cms.haric.dev/api/ next dev -H 0.0.0.0",
+    "dev": "DATA_SOURCE_URL=https://bubblepeoplecms.haric.dev/api/ next dev -H 0.0.0.0",
     "dev:mock-backend": "DATA_SOURCE_URI=http://localhost:8080/ next dev -H 0.0.0.0",
-    "build": "DATA_SOURCE_URL=https://cms.haric.dev/api/ next build",
+    "build": "DATA_SOURCE_URL=https://bubblepeoplecms.haric.dev/api/ next build",
     "start": "next start",
     "lint": "eslint"
   },

@@ -2,7 +2,7 @@ import { CMSImage, SiteData } from "@/types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-export const STRAPI_BASE_URL = "https://cms.haric.dev";
+export const STRAPI_BASE_URL = "https://bubblepeoplecms.haric.dev";
 
 export const HOME_POPULATE_QUERY =
   "populate[0]=Gallery&populate[1]=Upcoming&populate[2]=Notable.Image&populate[3]=Past&populate[4]=Supporters.Logo";
