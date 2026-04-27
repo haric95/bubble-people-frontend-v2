@@ -37,11 +37,11 @@ export const Background = () => {
   );
 
   return (
-    <div className="w-screen h-lvh fixed inset-0 overflow-hidden -z-10">
+    <div className="w-screen h-[calc(100lvh + 120px)] md:h-100lvh fixed inset-0 overflow-hidden -z-10">
       <motion.div
         style={{
           y,
-          height: `calc(130% + ${parallaxTravel}px)`,
+          height: `calc(100% + ${parallaxTravel}px)`,
           backgroundImage: "url(/images/background.webp)",
           backgroundSize: isMobile ? "cover" : "100% auto",
           backgroundPosition: "center top",
