@@ -11,7 +11,7 @@ type HomePageProps = { data: SiteData["home"] };
 export const HomePageContent = ({ data }: HomePageProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-8 md:mb-16 text-center whitespace-break-spaces text-shadow-2xl mix-blend-difference">
+      <div className="mb-8 md:mb-16 text-center whitespace-break-spaces text-shadow-2xl text-white">
         <Markdown>{data.bio}</Markdown>
       </div>
 
@@ -20,13 +20,13 @@ export const HomePageContent = ({ data }: HomePageProps) => {
       </div>
 
       <div
-        className="text-center mb-8 md:mb-16 mix-blend-difference"
+        className="text-center mb-8 md:mb-16 page-white"
         // initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
         // whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
         // transition={{ duration: 0.8 }}
         // viewport={{ once: true }}
       >
-        <h1 className="font-title mb-4 text-white text-lg md:text-xl heading-text-shadow mix-blend-difference">
+        <h1 className="font-title mb-4 text-white text-lg md:text-xl heading-text-shadow">
           Coming Up
         </h1>
         <div className="w-full">
@@ -64,7 +64,7 @@ export const HomePageContent = ({ data }: HomePageProps) => {
         // viewport={{ once: true }}
       >
         <h1
-          className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow mix-blend-exclusion"
+          className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow"
           style={{}}
         >
           Notable Works
@@ -83,7 +83,7 @@ export const HomePageContent = ({ data }: HomePageProps) => {
                   className="object-cover"
                 />
               </div>
-              <div className="w-full text-left md:w-2/3 md:pl-4 md:text-right p-4 border-white border-2 border-t-4 md:border-t-2 md:border-l-4 rounded-b-xl md:rounded-bl-none md:rounded-r-xl bg-white-transparent mix-blend-difference">
+              <div className="w-full text-left md:w-2/3 md:pl-4 md:text-right p-4 border-white border-2 border-t-4 md:border-t-2 md:border-l-4 rounded-b-xl md:rounded-bl-none md:rounded-r-xl bg-white-transparent">
                 <h3 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-lg heading-text-shadow">
                   {work.title}
                 </h3>
@@ -96,7 +96,7 @@ export const HomePageContent = ({ data }: HomePageProps) => {
       </div>
 
       <div
-        className="w-full mb-8 md:mb-16 text-center mix-blend-difference"
+        className="w-full mb-8 md:mb-16 text-center"
         // initial={{ opacity: 0, translateY: 50, filter: "blur(4px)" }}
         // whileInView={{ opacity: 1, translateY: 0, filter: "blur(0px)" }}
         // transition={{ duration: 0.8 }}
@@ -140,10 +140,10 @@ export const HomePageContent = ({ data }: HomePageProps) => {
         // transition={{ duration: 0.8 }}
         // viewport={{ once: true }}
       >
-        <h1 className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow mix-blend-difference">
+        <h1 className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow">
           Supporters
         </h1>
-        <div className="w-full flex justify-around h-32 mix-blend-difference">
+        <div className="w-full flex justify-around h-32">
           {data.supporters.map((supporter) => (
             <div
               className="flex items-center justify-center w-auto relative"

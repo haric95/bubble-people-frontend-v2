@@ -30,7 +30,7 @@ export const ShopCard: React.FC<ShopCardProps> = ({ direction, item }) => {
       </div>
       <div className="grow relative">
         <div
-          className="w-full h-full absolute bg-[#ffffff11] mix-blend-difference border-2 border-white rounded-b-xl md:rounded-bl-none md:rounded-r-xl border-t-4 md:border-t-2 md:border-l-4"
+          className="w-full h-full absolute bg-[#ffffff11] border-2 border-white rounded-b-xl md:rounded-bl-none md:rounded-r-xl border-t-4 md:border-t-2 md:border-l-4"
           style={{}}
         />
         <div
@@ -38,7 +38,7 @@ export const ShopCard: React.FC<ShopCardProps> = ({ direction, item }) => {
             direction === "left" ? "items-end text-right" : "items-start"
           }`}
         >
-          <div className="mb-2 md:mb-0 mix-blend-difference">
+          <div className="mb-2 md:mb-0">
             <h4 className="font-title font-weight-500 tracking-wider mb-4 text-md md:text-lg heading-text-shadow">
               {item.title}
             </h4>
@@ -49,12 +49,10 @@ export const ShopCard: React.FC<ShopCardProps> = ({ direction, item }) => {
               direction === "left" && "flex-row-reverse"
             }`}
           >
-            <button className="flex items-center translate-y-px font-title text-lg mr-2 text-white cursor-pointer duration-500 border-2 border-white rounded-xl px-2 mix-blend-difference bg-[#00000022] button-effect transform-all">
+            <button className="flex items-center translate-y-px font-title text-lg mr-2 text-white cursor-pointer duration-500 border-2 border-white rounded-xl px-2  bg-[#00000022] button-effect transform-all">
               Buy
             </button>
-            <p className="mr-4 text-md md:text-md mix-blend-difference">
-              £{item.price}
-            </p>
+            <p className="mr-4 text-md md:text-md">£{item.price}</p>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
               className="h-full w-auto rounded-lg"
             />
           </button>
-          <div className="flex flex-col justify-between h-full md:ml-2 w-full mix-blend-difference">
+          <div className="flex flex-col justify-between h-full md:ml-2 w-full">
             <p
               className="text-md text-white font-title"
               style={{ filter: "brightness(1)" }}

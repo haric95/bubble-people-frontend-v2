@@ -5,7 +5,7 @@ import { Link } from "next-view-transitions";
 export const Header = () => {
   return (
     <header className="flex py-4 w-full items-center font-title">
-      <div className="flex justify-center h-full items-center grow mix-blend-difference">
+      <div className="flex justify-center h-full items-center grow text-white">
         <Link
           href="/music"
           className="cursor-pointer h-full flex items-center text-effect"
@@ -29,9 +29,9 @@ export const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="flex justify-center h-full items-center grow mix-blend-difference">
+      <div className="flex justify-center h-full items-center grow">
         <Link href="/store" className="cursor-pointer">
-          <h1 className="tracking-wide text-md md:text-xl w-16 md:w-24 text-center hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
+          <h1 className="tracking-wide text-md md:text-xl w-16 md:w-24 text-center hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow text-white">
             Store
           </h1>
         </Link>

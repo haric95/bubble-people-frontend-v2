@@ -19,7 +19,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
     <>
       <div className="w-full mb-8">
         <h2
-          className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
+          className="font-title mb-4 text-white text-xl heading-text-shadow"
           style={{}}
         >
           LP
@@ -44,7 +44,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
       </div>
       <div className="w-full mb-8">
         <h2
-          className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
+          className="font-title mb-4 text-white text-xl heading-text-shadow"
           style={{}}
         >
           EP
@@ -69,7 +69,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
       </div>
       <div className="w-full mb-8">
         <h2
-          className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
+          className="font-title mb-4 text-white text-xl heading-text-shadow"
           style={{}}
         >
           AV
