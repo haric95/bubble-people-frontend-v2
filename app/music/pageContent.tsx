@@ -20,12 +20,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
       <div className="w-full mb-8">
         <h2
           className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
-          style={{
-            backgroundClip: "text",
-            backgroundImage: "url(/images/mask-1.jpg)",
-            // filter: "brightness(1.5) contrast(0.8) brightness(1.3)",
-            backgroundSize: "200% 400%",
-          }}
+          style={{}}
         >
           LP
         </h2>
@@ -39,7 +34,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="mb-2 w-full shadow-2xl rounded-xl"
+                className="mb-2 w-full shadow-2xl rounded-xl aspect-square"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
@@ -50,12 +45,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
       <div className="w-full mb-8">
         <h2
           className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
-          style={{
-            backgroundClip: "text",
-            backgroundImage: "url(/images/mask-1.jpg)",
-            // filter: "brightness(1.5) contrast(0.8) brightness(1.3)",
-            backgroundSize: "300% 40%",
-          }}
+          style={{}}
         >
           EP
         </h2>
@@ -69,7 +59,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="mb-2 w-full shadow-2xl rounded-xl"
+                className="mb-2 w-full shadow-2xl rounded-xl aspect-square"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
@@ -80,12 +70,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
       <div className="w-full mb-8">
         <h2
           className="font-title mb-4 text-white text-xl heading-text-shadow mix-blend-difference"
-          style={{
-            backgroundClip: "text",
-            backgroundImage: "url(/images/mask-1.jpg)",
-            // filter: "brightness(1.5) contrast(0.8) brightness(1.3)",
-            backgroundSize: "100% 120%",
-          }}
+          style={{}}
         >
           AV
         </h2>
@@ -100,7 +85,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="b-2 w-full shadow-2xl rounded-xl mb-2"
+                className="b-2 w-full shadow-2xl rounded-xl mb-2 aspect-square"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
