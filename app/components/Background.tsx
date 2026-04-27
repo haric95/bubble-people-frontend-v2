@@ -6,15 +6,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 
 const PARALLAX_RATE = 0.05;
 
-const BASE_Y: Record<string, number> = {
-  "/": 0,
-  "/shop": 0,
-  "/music": 0,
-};
-
 export const Background = () => {
-  const pathname = usePathname();
-
   const { scrollY } = useScroll();
   const { isMobile } = useIsMobile();
 
@@ -38,12 +30,11 @@ export const Background = () => {
 
   const maxScroll = dimensions.pageHeight - dimensions.windowHeight;
   const parallaxTravel = PARALLAX_RATE * maxScroll;
-  const baseY = BASE_Y[pathname] ?? 0;
 
   const y = useTransform(
     scrollY,
     [0, maxScroll],
-    [`${baseY - parallaxTravel}px`, `${baseY}px`],
+    [`-${parallaxTravel}px`, `0px`],
   );
 
   return (
@@ -51,7 +42,7 @@ export const Background = () => {
       <motion.div
         style={{
           y,
-          height: `calc(100%+ ${Math.abs(baseY - parallaxTravel)}px)`,
+          height: `calc(100% + ${parallaxTravel}px)`,
           backgroundImage: "url(/images/background.webp)",
           backgroundSize: isMobile ? "cover" : "100% auto",
           backgroundPosition: "center top",
