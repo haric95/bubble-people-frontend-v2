@@ -117,7 +117,11 @@ export const HomePageContent = ({ data }: HomePageProps) => {
               <div className="w-28.5"></div>
               <p>{show.title}</p>
               {show.url && (
-                <Link href={show.url} target="_blank" className="">
+                <Link
+                  href={show.url}
+                  target="_blank"
+                  className="-translate-y-1"
+                >
                   <div className="mx-8 font-title text-sm border-2 border-white px-2 py-1 cursor-pointer transition-all duration-500 rounded-xl bg-white-transparent button-effect">
                     <p className="heading-text-shadow">INFO</p>
                   </div>
