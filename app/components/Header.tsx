@@ -30,9 +30,9 @@ export const Header = () => {
         </Link>
       </div>
       <div className="flex justify-center h-full items-center grow mix-blend-difference">
-        <Link href="/shop" className="cursor-pointer">
+        <Link href="/store" className="cursor-pointer">
           <h1 className="tracking-wide text-md md:text-xl w-16 md:w-24 text-center hover:scale-105 transition-all duration-500 cursor-pointer heading-text-shadow">
-            Shop
+            Store
           </h1>
         </Link>
       </div>
