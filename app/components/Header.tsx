@@ -20,7 +20,7 @@ export const Header = () => {
           href="/"
           className="cursor-pointer flex w-fit h-fit hover:scale-105 transition-all duration-500"
         >
-          <div className="h-32 w-32 md:h-64 md:w-64 sepia opacity-90">
+          <div className="h-32 w-32 md:h-64 md:w-64 sepia opacity-95">
             <img
               src="/images/logo-header.webp"
               className="w-full h-full drop-shadow-2xl"
