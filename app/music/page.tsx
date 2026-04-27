@@ -6,6 +6,7 @@ import {
 } from "@/lib/strapi";
 import { AudioPlayer } from "../components/AudioPlayer";
 import { MusicPageContent } from "./pageContent";
+import Link from "next/link";
 
 const Music = async () => {
   const raw = (await fetch(

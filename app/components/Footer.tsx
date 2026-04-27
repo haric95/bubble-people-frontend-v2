@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
 import { FaBandcamp } from "react-icons/fa";
