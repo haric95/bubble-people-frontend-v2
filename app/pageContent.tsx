@@ -111,7 +111,9 @@ export const HomePageContent = ({ data }: HomePageProps) => {
         <div className="w-full text-center">
           {data.past.map((show) => (
             <div className="w-full text-center mb-2" key={show.title}>
-              <p>{show.title}</p>
+              <a href={show.url} target="_blank" rel={"noreferrer"}>
+                {show.title}
+              </a>
             </div>
           ))}
           <div className="" />
