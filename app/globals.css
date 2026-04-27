@@ -3,42 +3,10 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Ethnocentric";
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/Ethnocentric-Regular.otf);
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Sono";
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/sono/web/Sono-SemiBold.woff2);
-}
-
-@font-face {
-    font-display: swap;
     font-family: "Robot";
     font-style: normal;
     font-weight: 700;
     src: url(/fonts/CBR.otf);
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Carbon";
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/carbon/carbon.otf);
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/Roboto-Regular.ttf);
 }
 
 html,
