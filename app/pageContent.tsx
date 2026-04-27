@@ -29,7 +29,7 @@ export const HomePageContent = ({ data }: HomePageProps) => {
         <h1 className="font-title mb-4 text-white text-lg md:text-xl heading-text-shadow">
           Coming Up
         </h1>
-        <div className="w-full">
+        <div className="w-full text-white">
           {data.upcoming.map((show, index) => (
             <div
               className={`flex flex-col md:flex-row mb-4 md:mb-4 justify-center items-center ${index !== data.upcoming.length - 1 ? "mb-4" : ""}`}
