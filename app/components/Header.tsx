@@ -22,7 +22,7 @@ export const Header = () => {
         >
           <div className="h-32 w-32 md:h-64 md:w-64 sepia opacity-90">
             <img
-              src="/images/logo-header.png"
+              src="/images/logo-header.webp"
               className="w-full h-full drop-shadow-2xl"
               style={{ imageOrientation: "none" }}
             />

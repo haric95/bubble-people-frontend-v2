@@ -24,7 +24,7 @@ export const Loader = () => {
           exit={{ opacity: 0 }}
         >
           <motion.img
-            src="/images/logo-header.png"
+            src="/images/logo-header.webp"
             className="w-64 h-64 animate-pulse duration-300"
             exit={{ translateY: "-40vh" }}
             transition={{ ease: "easeInOut" }}
