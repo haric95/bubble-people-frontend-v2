@@ -1,6 +1,5 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../hooks/useIsMobile";
 
@@ -42,7 +41,7 @@ export const Background = () => {
       <motion.div
         style={{
           y,
-          height: `calc(100% + ${parallaxTravel}px)`,
+          height: `calc(130% + ${parallaxTravel}px)`,
           backgroundImage: "url(/images/background.webp)",
           backgroundSize: isMobile ? "cover" : "100% auto",
           backgroundPosition: "center top",
