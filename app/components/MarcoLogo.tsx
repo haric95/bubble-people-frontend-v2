@@ -4,7 +4,7 @@ export const MarcoLogo = () => {
       <img
         src="/images/marco-logo.webp"
         className="h-full animate-rotate-y"
-        style={{ animation: "rotateY 5000ms linear infinite" }}
+        style={{ animation: "rotateY 8000ms linear infinite" }}
       />
     </div>
   );
