@@ -8,7 +8,7 @@ export const MarcoLogo = () => {
 
   return pathname === "/" ? (
     <button
-      className="absolute bottom-0 right-0 w-fit h-24 md:h-32 p-4 mix-blend-difference opacity-90"
+      className="absolute bottom-0 right-0 w-fit h-24 md:h-32 p-4"
       onClick={() => {
         if (pathname === "/") {
           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -24,7 +24,7 @@ export const MarcoLogo = () => {
   ) : (
     <Link
       href={"/"}
-      className="absolute bottom-0 right-0 w-fit h-24 md:h-32 p-4 mix-blend-difference opacity-90"
+      className="absolute bottom-0 right-0 w-fit h-24 md:h-32 p-4"
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}

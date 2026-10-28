@@ -106,7 +106,7 @@ export const HomePageContent = ({ data }: HomePageProps) => {
           className="font-title mb-8 text-white text-lg md:text-xl heading-text-shadow"
           style={{}}
         >
-          Past Shows
+          Previous Shows
         </h1>
         <div className="w-full flex justify-center">
           <div className="w-fit text-center">
