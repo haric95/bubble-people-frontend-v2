@@ -23,7 +23,7 @@ export const Header = () => {
           <div className="h-32 w-32 md:h-64 md:w-64 opacity-95">
             <img
               src="/images/logo-header.webp"
-              className="w-full h-full drop-shadow-2xl"
+              className="w-full h-full object-contain drop-shadow-2xl"
               style={{ imageOrientation: "none" }}
             />
           </div>

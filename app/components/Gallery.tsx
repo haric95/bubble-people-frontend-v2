@@ -45,10 +45,9 @@ export const Gallery = (props: GalleryProps) => {
           <Image
             src={image.url}
             alt={"image"}
-            width={600}
-            height={400}
+            fill
             key={image.url}
-            className="transition-opacity duration-1000 absolute w-full h-fill object-cover object-center"
+            className="transition-opacity duration-1000 absolute object-cover object-center"
             style={{
               opacity: index === visibleImageIndex ? "100%" : "0%",
             }}

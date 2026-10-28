@@ -53,9 +53,8 @@ export const AudioPlayer = ({ audioItems }: AudioPlayerProps) => {
             <Image
               alt="Image"
               src={audioItems[playIndex].cover}
-              layout="fill"
-              objectFit="cover"
-              className="h-full w-auto rounded-lg"
+              fill
+              className="object-cover rounded-lg"
             />
           </button>
           <div className="flex flex-col justify-between h-full md:ml-2 w-full">

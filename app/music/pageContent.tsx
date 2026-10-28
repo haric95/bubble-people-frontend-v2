@@ -34,7 +34,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="mb-2 w-full shadow-2xl rounded-xl aspect-square"
+                className="mb-2 w-full shadow-2xl rounded-xl aspect-square object-cover"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
@@ -59,7 +59,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="mb-2 w-full shadow-2xl rounded-xl aspect-square"
+                className="mb-2 w-full shadow-2xl rounded-xl aspect-square object-cover"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
@@ -85,7 +85,7 @@ export const MusicPageContent = ({ data }: MusicPageContentProps) => {
             >
               <img
                 src={item.cover}
-                className="b-2 w-full shadow-2xl rounded-xl mb-2 aspect-square"
+                className="b-2 w-full shadow-2xl rounded-xl mb-2 aspect-square object-cover"
               />
               <p>{item.title}</p>
               <p>{item.year}</p>
